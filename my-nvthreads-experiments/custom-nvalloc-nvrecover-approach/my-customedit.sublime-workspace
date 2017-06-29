@@ -1,0 +1,806 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"pth",
+				"pthread_join"
+			],
+			[
+				"tail",
+				"tailNodeInfo"
+			],
+			[
+				"node",
+				"node_count"
+			],
+			[
+				"upda",
+				"updateLinks"
+			],
+			[
+				"de",
+				"delete"
+			],
+			[
+				"head",
+				"headNodeInfo"
+			],
+			[
+				"list",
+				"list"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"ht_",
+				"ht_gm"
+			],
+			[
+				"val",
+				"value"
+			],
+			[
+				"number",
+				"number_of_threads"
+			],
+			[
+				"thre",
+				"thread_id"
+			],
+			[
+				"FILED",
+				"FAILED"
+			],
+			[
+				"remov",
+				"removed"
+			],
+			[
+				"start",
+				"_start"
+			],
+			[
+				"aj",
+				"ajadd"
+			],
+			[
+				"_tra",
+				"_transientMemory"
+			],
+			[
+				"_tr",
+				"_transientMemory"
+			],
+			[
+				"MAP",
+				"MAP_FIXED"
+			],
+			[
+				"hash",
+				"hash_offset"
+			],
+			[
+				"print",
+				"printf\tprintf …"
+			],
+			[
+				"Ha",
+				"HASH_TAB_SIZE"
+			],
+			[
+				"no",
+				"node_count"
+			],
+			[
+				"nvrecover",
+				"nvrecover_aj"
+			],
+			[
+				"ptr_",
+				"ptr_list_head"
+			],
+			[
+				"recove",
+				"recoveredVarmapMulti"
+			],
+			[
+				"page",
+				"pageOffset"
+			],
+			[
+				"data",
+				"data1"
+			],
+			[
+				"ptr",
+				"ptrag"
+			],
+			[
+				"pt",
+				"ptraggr"
+			],
+			[
+				"N",
+				"NULL"
+			],
+			[
+				"touch",
+				"touch_size"
+			],
+			[
+				"as",
+				"ascii"
+			],
+			[
+				"ne",
+				"next"
+			],
+			[
+				"ar",
+				"arr"
+			],
+			[
+				"new",
+				"list_new"
+			],
+			[
+				"lli",
+				"llist_t"
+			],
+			[
+				"node_",
+				"node_t"
+			],
+			[
+				"ll",
+				"llist_t"
+			],
+			[
+				"mem",
+				"memLogPath"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "myapps/coarse-grained-list/linkedlist.h",
+			"settings":
+			{
+				"buffer_size": 1898,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "myapps/coarse-grained-list/linkedlist.c",
+			"settings":
+			{
+				"buffer_size": 13457,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "NVThreads-lib/src/source/libdthread.cpp",
+			"settings":
+			{
+				"buffer_size": 13954,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "NVThreads-lib/src/include/xmemory.h",
+			"settings":
+			{
+				"buffer_size": 11164,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "myapps/coarse-grained-list/ll_test_eval.c",
+			"settings":
+			{
+				"buffer_size": 14527,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/ajay/intern-ws/PersistentDS-NVThreads/custom-nvalloc-nvrecover-approach/myapps",
+		"/home/ajay/intern-ws/PersistentDS-NVThreads/custom-nvalloc-nvrecover-approach/myapps/coarse-grained-list",
+		"/home/ajay/intern-ws/PersistentDS-NVThreads/custom-nvalloc-nvrecover-approach/NVThreads-lib/src",
+		"/home/ajay/intern-ws/PersistentDS-NVThreads/custom-nvalloc-nvrecover-approach/NVThreads-lib/src/source"
+	],
+	"file_history":
+	[
+		"/home/ajay/intern-ws/PersistentDS-NVThreads/custom-nvalloc-nvrecover-approach/myapps/coarse-grained-list/test.c",
+		"/home/ajay/intern-ws/PersistentDS-NVThreads/custom-nvalloc-nvrecover-approach/myapps/coarse-grained-list/ll_test_eval.c",
+		"/home/ajay/intern-ws/PersistentDS-NVThreads/custom-nvalloc-nvrecover-approach/NVThreads-lib/src/include/real.h",
+		"/home/ajay/intern-ws/PersistentDS-NVThreads/custom-nvalloc-nvrecover-approach/NVThreads-lib/src/source/real.cpp",
+		"/home/ajay/intern-ws/PersistentDS-NVThreads/custom-nvalloc-nvrecover-approach/NVThreads-lib/src/include/xmemory.h",
+		"/home/ajay/intern-ws/PersistentDS-NVThreads/custom-nvalloc-nvrecover-approach/NVThreads-lib/src/include/logger.h",
+		"/home/ajay/intern-ws/PersistentDS-NVThreads/custom-nvalloc-nvrecover-approach/myapps/coarse-grained-list/Makefile",
+		"/home/ajay/intern-ws/PersistentDS-NVThreads/custom-nvalloc-nvrecover-approach/myapps/coarse-grained-list/common.h",
+		"/home/ajay/intern-ws/PersistentDS-NVThreads/custom-nvalloc-nvrecover-approach/NVThreads-lib/src/include/nvrecovery.h",
+		"/home/ajay/intern-ws/PersistentDS-NVThreads/custom-nvalloc-nvrecover-approach/NVThreads-lib/src/source/libdthread.cpp",
+		"/home/ajay/intern-ws/PersistentDS-NVThreads/custom-nvalloc-nvrecover-approach/myapps/coarse-grained-list/linkedlist.c",
+		"/home/ajay/intern-ws/PersistentDS-NVThreads/custom-nvalloc-nvrecover-approach/myapps/coarse-grained-list/linkedlist.h",
+		"/home/ajay/intern-ws/nvthreads-master/tests/recover/ll_test_eval.c",
+		"/home/ajay/intern-ws/nvthreads-master/eval/tests/reverse_index/README",
+		"/home/ajay/intern-ws/nvthreads-master/eval/tests/reverse_index/reverseindex-seq.c",
+		"/home/ajay/intern-ws/nvthreads-master/eval/tests/reverse_index/reverseindex.c",
+		"/home/ajay/intern-ws/nvthreads-master/eval/tests/reverse_index/reverseindex-pthread.c",
+		"/home/ajay/intern-ws/nvthreads-master/tests/recover/recover_aggr.c",
+		"/home/ajay/intern-ws/nvthreads-master/tests/recover/recover_array.c",
+		"/home/ajay/intern-ws/nvthreads-master/tests/recover/recover_hashtab.c",
+		"/home/ajay/intern-ws/nvthreads-master/tests/recover/recover_int.c",
+		"/home/ajay/intern-ws/nvthreads-master/tests/recover/recover_list.c",
+		"/home/ajay/intern-ws/nvthreads-master/tests/recover/recover_lstag.c",
+		"/home/ajay/intern-ws/nvthreads-master/tests/recover/hash_test.c",
+		"/home/ajay/intern-ws/nvthreads-master/tests/recover/hashtab.h",
+		"/home/ajay/intern-ws/nvthreads-master/tests/recover/Makefile",
+		"/home/ajay/intern-ws/nvthreads-master/tests/recover/hashtab.c",
+		"/home/ajay/intern-ws/nvthreads-master/tests/recover/common.h",
+		"/home/ajay/intern-ws/nvthreads-master/tests/recover/linkedlist.h",
+		"/home/ajay/intern-ws/nvthreads-master/tests/recover/linkedlist.c",
+		"/home/ajay/intern-ws/nvthreads-master/tests/recover/ll_test.c",
+		"/home/ajay/intern-ws/nvthreads-master/src/include/xmemory.h",
+		"/home/ajay/intern-ws/nvthreads-master/src/include/determ.h",
+		"/home/ajay/intern-ws/nvthreads-master/src/include/xpersist.h",
+		"/home/ajay/intern-ws/nvthreads-master/src/include/warpheap.h",
+		"/home/ajay/intern-ws/nvthreads-master/src/include/xrun.h",
+		"/home/ajay/intern-ws/nvthreads-master/src/include/logger.h",
+		"/home/ajay/intern-ws/nvthreads-master/src/include/nvrecovery.h",
+		"/home/ajay/intern-ws/nvthreads-master/src/source/libdthread.cpp",
+		"/home/ajay/intern-ws/nvthreads-master-2/src/include/xheap.h",
+		"/home/ajay/intern-ws/nvthreads-master/src/include/xheap.h",
+		"/home/ajay/intern-ws/nvthreads-master/src/include/aj.h",
+		"/home/ajay/intern-ws/nvthreads-master/src/include/xadaptheap.h",
+		"/home/ajay/intern-ws/nvthreads-master/src/include/xoneheap.h",
+		"/home/ajay/intern-ws/nvthreads-master/src/include/objectheader.h",
+		"/home/ajay/intern-ws/nvthreads-master/src/include/debug.h",
+		"/home/ajay/intern-ws/nvthreads-master/src/source/real.cpp",
+		"/home/ajay/intern-ws/nvthreads-master/src/include/xdefines.h",
+		"/home/ajay/intern-ws/nvthreads-master/src/source/xmemory.cpp",
+		"/home/ajay/intern-ws/nvthreads-master/src/include/list.h",
+		"/home/ajay/intern-ws/nvthreads-master/src/include/heaplayers/ansiwrapper.h",
+		"/home/ajay/intern-ws/nvthreads-master/src/include/heaplayers/util/sllist.h",
+		"/home/ajay/intern-ws/nvthreads-master/src/include/heaplayers/segheap.h",
+		"/home/ajay/intern-ws/nvthreads-master/src/source/nvrecovery.cpp",
+		"/home/ajay/intern-ws/nvthreads-master/tests/mutex/nested_locks.c",
+		"/home/ajay/intern-ws/nvthreads-master/tests/mutex/dependence.c",
+		"/home/ajay/intern-ws/nvthreads-master/tests/mutex/condvar.c",
+		"/home/ajay/intern-ws/nvthreads-master/tests/timertest/logger.h",
+		"/home/ajay/intern-ws/nvthreads-master/tests/timertest/logger.c",
+		"/home/ajay/intern-ws/nvthreads-master/tests/timertest/timertest.c",
+		"/home/ajay/intern-ws/nvthreads-master/tests/mempages/checkpages.c",
+		"/home/ajay/intern-ws/nvthreads-master/tests/mempages/empty.cpp",
+		"/home/ajay/intern-ws/nvthreads-master/tests/mempages/forloop.c",
+		"/home/ajay/intern-ws/nvthreads-master/tests/mempages/nocrtsection.c",
+		"/home/ajay/intern-ws/nvthreads-master/tests/mempages/readmemlog.c",
+		"/home/ajay/intern-ws/nvthreads-master/tests/mempages/test1.c",
+		"/home/ajay/intern-ws/nvthreads-master/tests/mempages/test2.c",
+		"/home/ajay/intern-ws/nvthreads-master/tests/mempages/test3.c",
+		"/home/ajay/intern-ws/nvthreads-master/tests/large_malloc/over4g.c",
+		"/home/ajay/intern-ws/Mnemosyne-master/usermode/examples/singly_linked_list/SConscript",
+		"/home/ajay/intern-ws/Mnemosyne-master/usermode/examples/simple/main.c",
+		"/home/ajay/intern-ws/Mnemosyne-master/usermode/library/mtm/include/mtm.h",
+		"/home/ajay/intern-ws/Mnemosyne-master/usermode/examples/SConscript",
+		"/home/ajay/intern-ws/Mnemosyne-master/usermode/examples/singly_linked_list/singly_linked_list.hxx",
+		"/home/ajay/intern-ws/Mnemosyne-master/usermode/examples/singly_linked_list/singly_linked_list.cxx",
+		"/home/ajay/intern-ws/Mnemosyne-master/usermode/examples/singly_linked_list/main.cxx",
+		"/home/ajay/intern-ws/Mnemosyne-master/usermode/bench/openldap/openldap-2.3.35-mnemosyne/include/avl.h",
+		"/home/ajay/intern-ws/nvthreads-master/src/include/heaplayers/perclassheap.h",
+		"/home/ajay/intern-ws/nvthreads-master/src/include/internalheap.h",
+		"/home/ajay/intern-ws/nvthreads-master/src/include/heaplayers/experimental/fifofreelist.h",
+		"/home/ajay/intern-ws/AlgorithmCollection-master/list/common.h",
+		"/home/ajay/intern-ws/nvthreads-master/tests/recover/ll-test.c",
+		"/home/ajay/intern-ws/nvthreads-master/src/source/logger.cpp",
+		"/home/ajay/intern-ws/nvthreads-master/tests/recover/linkedlist.cpp",
+		"/home/ajay/intern-ws/AlgorithmCollection-master/list/CoarseGrainedSynchroList.c",
+		"/home/ajay/intern-ws/AlgorithmCollection-master/list/CoarseGrainedSynchroList.h",
+		"/home/ajay/intern-ws/nvthreads-master/src/include/real.h",
+		"/home/ajay/intern-ws/nvthreads-master/src/include/heaplayers/wrapper.cpp",
+		"/home/ajay/intern-ws/nvthreads-master/src/include/heaplayers/traceheap.h",
+		"/home/ajay/intern-ws/nvthreads-master/src/Makefile",
+		"/home/ajay/intern-ws/nvthreads-master/apps/kmeans/phoenix-recovery/kmeans-pthread.c",
+		"/home/ajay/intern-ws/mytestCode/pm1.c",
+		"/home/ajay/Downloads/nvml-master/src/include/libpmemobj/lists_atomic.h",
+		"/home/ajay/Downloads/nvml-master/src/include/libpmemobj/types.h",
+		"/home/ajay/Downloads/nvml-master/doc/libpmemobj.3.md",
+		"/home/ajay/intern-ws/nvthreads-master/src/include/privateheap.h",
+		"/home/ajay/intern-ws/nvthreads-master/src/include/heaplayers/adaptheap.h",
+		"/home/ajay/intern-ws/nvthreads-master/src/include/heaplayers/adapt.h",
+		"/home/ajay/intern-ws/linux-examples-master/libpmemalloc/pmemalloc.c",
+		"/home/ajay/intern-ws/linux-examples-master/libpmemalloc/pmemalloc.h",
+		"/home/ajay/intern-ws/linux-examples-master/binarytree/tree.c",
+		"/home/ajay/intern-ws/nvthreads-master/apps/datagen/datagen.cpp",
+		"/home/ajay/intern-ws/nvthreads-master/apps/tokyocabinet-1.4.48/tcbmtsimple_nvthread.c",
+		"/home/ajay/intern-ws/nvthreads-master/apps/pagerank/singlethreaded/algorithm.c",
+		"/home/ajay/intern-ws/nvthreads-master/apps/pagerank/singlethreaded/main.c",
+		"/home/ajay/intern-ws/nvthreads-master/apps/kmeans/phoenix-recovery/eval_kmeans_recovery.py",
+		"/home/ajay/intern-ws/nvthreads-master/tests/flush_test/flush_sync.c",
+		"/home/ajay/intern-ws/nvthreads-master/src/include/heaplayers/mmapheap.h",
+		"/home/ajay/Downloads/ConcLinkedList-master/src/linkedlist-lock/linkedlist.h",
+		"/home/ajay/Downloads/ConcLinkedList-master/src/linkedlist-lock/linkedlist.c",
+		"/home/ajay/aj-workspace/internship-ws/code-ws/nvthreads-master/src/include/xmemory.h",
+		"/home/ajay/aj-workspace/internship-ws/code-ws/nvthreads-master/src/include/xrun.h",
+		"/home/ajay/aj-workspace/internship-ws/code-ws/nvthreads-master/src/source/libdthread.cpp",
+		"/home/ajay/aj-workspace/internship-ws/code-ws/nvthreads-master/tests/recover/recover_aggr.c",
+		"/home/ajay/Downloads/ConcLinkedList-master/src/linkedlist-lock/main.c",
+		"/home/ajay/aj-workspace/internship-ws/code-ws/nvthreads-master/tests/recover/recover_list.c",
+		"/home/ajay/aj-workspace/internship-ws/code-ws/nvthreads-master/tests/large_malloc/over4g.c",
+		"/home/ajay/aj-workspace/internship-ws/code-ws/nvthreads-master/tests/mempages/test1.c",
+		"/home/ajay/aj-workspace/internship-ws/code-ws/nvthreads-master/tests/mempages/test2.c",
+		"/home/ajay/aj-workspace/internship-ws/code-ws/nvthreads-master/tests/mempages/readmemlog.c",
+		"/home/ajay/aj-workspace/internship-ws/code-ws/nvthreads-master/src/include/internalheap.h",
+		"/home/ajay/aj-workspace/internship-ws/code-ws/nvthreads-master/tests/recover/recover_int.c",
+		"/home/ajay/aj-workspace/internship-ws/code-ws/nvthreads-master/tests/recover/recover_array.c",
+		"/home/ajay/Downloads/ConcLinkedList-master/src/linkedlist/linkedlist.h",
+		"/home/ajay/Downloads/ConcLinkedList-master/src/linkedlist/main.c",
+		"/home/ajay/Downloads/ConcLinkedList-master/src/linkedlist/linkedlist.c",
+		"/home/ajay/aj-workspace/internship-ws/code-ws/nvthreads-master/src/include/xpersist.h",
+		"/home/ajay/aj-workspace/internship-ws/code-ws/nvthreads-master/src/include/nvrecovery.h"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 102.0,
+		"where_history":
+		[
+			"",
+			"<current file>",
+			"",
+			"<open files>",
+			"",
+			"<open files>",
+			"",
+			"<open files>",
+			"",
+			"/home/ajay/intern-ws/nvthreads-master/apps/pagerank/singlethreaded,<open folders>,/home/ajay/intern-ws/nvthreads-master/apps,*.txt",
+			"/home/ajay/intern-ws/nvthreads-master/apps/pagerank/singlethreaded,<open folders>,/home/ajay/intern-ws/nvthreads-master/apps",
+			"/home/ajay/intern-ws/nvthreads-master/apps/pagerank/singlethreaded,<open folders>",
+			"/home/ajay/intern-ws/nvthreads-master/apps/pagerank/singlethreaded",
+			"",
+			"<current file>",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"write(",
+			"write",
+			"real.h",
+			"read_read",
+			"read",
+			"AppendVarMapLog",
+			"write",
+			"read",
+			"write",
+			"_real_read",
+			"free_node",
+			"node_free",
+			"free",
+			"node_count",
+			"next",
+			"link_elem",
+			"link_head",
+			"list",
+			"list_t",
+			"taj",
+			"start",
+			"taj",
+			"tid1",
+			"map error with",
+			"real_count",
+			"real_",
+			"real",
+			"sort_list",
+			"-1",
+			"free_node",
+			"seed",
+			"i",
+			"barrier",
+			"barrier_cross",
+			"barrier_init",
+			"barrier_cross",
+			"thread_id",
+			"insertNum",
+			"tmp",
+			"gm",
+			"finds",
+			"list_add",
+			"seeds",
+			"running",
+			"the_list",
+			"llist_t",
+			"gmtx",
+			"Type",
+			"NElts",
+			"mempage_file_vector",
+			"CreateLogPath",
+			"MemLog",
+			"RecoverDataFromMemlog",
+			"RecoverOnePage",
+			"@J",
+			"\n#",
+			"_heapid",
+			"xglobals _globals",
+			"xmemory::",
+			"ajfixaddr",
+			"xmemory::",
+			"_tr",
+			"SourceHeap",
+			"xheap",
+			"xpersist",
+			"Heap",
+			"xmemory::",
+			"nvrecovery::",
+			"nvrecovery:",
+			"nvrecovery::",
+			"xmemory::",
+			"_start",
+			"xpersist.h",
+			"struct pageDependence",
+			"pageDependence",
+			"nvreco",
+			"nvrec",
+			"xpersist(",
+			"xpersist",
+			"xpersist::",
+			"xpersist::ini",
+			"ajfix",
+			"_transientMemory",
+			"checkan",
+			"ajfixaddr",
+			"MemoryLog",
+			"memory log",
+			"localMemoryLog",
+			"OpenMemoryLog",
+			"setNVID",
+			"crash",
+			"initialize",
+			"nvid",
+			"Failed to make persistent file",
+			"crash",
+			"nvlibcrash",
+			"crashed",
+			"ajprintf",
+			"setStart",
+			"setPageSta",
+			"_transientMemory",
+			"Creating loo",
+			"Creating",
+			"creating",
+			"creating lookup",
+			"creating loo",
+			"read",
+			"DEBUG",
+			"NVLOGGING",
+			"NVID",
+			"MAP_FIXED",
+			"isCrashed",
+			"step",
+			"class LittleHeap",
+			"myLittleHeap",
+			"LittleHeap",
+			"myLittleHeap",
+			"free(",
+			"nvmalloc",
+			"nvrecover",
+			"__tm_atomic",
+			"tm_callable",
+			"free",
+			"getHeap",
+			"gm",
+			"bool_t",
+			"key_t",
+			"_node_"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"list",
+			"probe",
+			"bool",
+			"node_key_t",
+			"node",
+			"mtx",
+			"key_t",
+			"table_size",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "myapps/coarse-grained-list/linkedlist.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1898,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1112,
+								1112
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 660.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "myapps/coarse-grained-list/linkedlist.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13457,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								944,
+								944
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 986.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "NVThreads-lib/src/source/libdthread.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13954,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4700,
+								4700
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2974.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "NVThreads-lib/src/include/xmemory.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11164,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4368,
+								4368
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3194.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "myapps/coarse-grained-list/ll_test_eval.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 14527,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 360.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "my-customedit.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 413.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 201.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

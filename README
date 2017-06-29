@@ -1,0 +1,16 @@
+The rep consists of my experiments with SCM/NVM programming libraries namely,
+					NVThreads [1]
+					NVML	  [2]
+					Mnemosyne [3]
+Using above libraries following concurrent persistent DS has been implemented:
+					coarse grained persistent Set.
+					fine grained persistent Set.
+
+The implementation of above two algorithms follows Art of Multicore programming by Maurice Herlihy.
+To build and see the Set implementation working please follow instructions within each subdirectory.
+
+References:
+[1]: Hsu, Terry Ching-Hsiang, et al. "NVthreads: Practical Persistence for Multi-threaded Applications." Proceedings of the Twelfth European 	  Conference on Computer Systems. ACM, 2017.
+[2]: https://github.com/pmem/nvml/
+[3]: Volos, Haris, Andres Jaan Tack, and Michael M. Swift. "Mnemosyne: Lightweight persistent memory." ACM SIGARCH Computer Architecture News. 	    Vol. 39. No. 1. ACM, 2011.
+

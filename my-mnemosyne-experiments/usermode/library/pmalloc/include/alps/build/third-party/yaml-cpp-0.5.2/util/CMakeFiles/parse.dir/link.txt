@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++11 -O3 -w -O2   CMakeFiles/parse.dir/parse.cpp.o  -o parse -rdynamic ../libyaml-cpp.a 

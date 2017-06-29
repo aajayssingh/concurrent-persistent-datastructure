@@ -1,0 +1,6 @@
+Test the library for the 0:0 recovery problem.
+try nvmalloc and nvrecover for unique name for each node. If the error occurs that implies that the bug is in library.
+
+
+Each thread gets its own unique page number.
+If key values donot clash that fixes the recovery error

@@ -1,0 +1,110 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f54b7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f54b7.dir/build.make CMakeFiles/cmTC_f54b7.dir/build
+make[1]: Entering directory '/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f54b7.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -fPIE   -o CMakeFiles/cmTC_f54b7.dir/CheckSymbolExists.c.o   -c /home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_f54b7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f54b7.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_f54b7.dir/CheckSymbolExists.c.o  -o cmTC_f54b7 -rdynamic 
+CMakeFiles/cmTC_f54b7.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_f54b7.dir/build.make:97: recipe for target 'cmTC_f54b7' failed
+make[1]: *** [cmTC_f54b7] Error 1
+make[1]: Leaving directory '/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_f54b7/fast' failed
+make: *** [cmTC_f54b7/fast] Error 2
+
+File /home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e0df7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e0df7.dir/build.make CMakeFiles/cmTC_e0df7.dir/build
+make[1]: Entering directory '/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e0df7.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create -fPIE   -o CMakeFiles/cmTC_e0df7.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e0df7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e0df7.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_e0df7.dir/CheckFunctionExists.c.o  -o cmTC_e0df7 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_e0df7.dir/build.make:97: recipe for target 'cmTC_e0df7' failed
+make[1]: *** [cmTC_e0df7] Error 1
+make[1]: Leaving directory '/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_e0df7/fast' failed
+make: *** [cmTC_e0df7/fast] Error 2
+
+
+Determining if the function getexecname exists failed with the following output:
+Change Dir: /home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_597f5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_597f5.dir/build.make CMakeFiles/cmTC_597f5.dir/build
+make[1]: Entering directory '/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_597f5.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_GNU_SOURCE  -DCHECK_FUNCTION_EXISTS=getexecname -fPIE   -o CMakeFiles/cmTC_597f5.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_597f5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_597f5.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=getexecname    CMakeFiles/cmTC_597f5.dir/CheckFunctionExists.c.o  -o cmTC_597f5 -rdynamic 
+CMakeFiles/cmTC_597f5.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `getexecname'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_597f5.dir/build.make:97: recipe for target 'cmTC_597f5' failed
+make[1]: *** [cmTC_597f5] Error 1
+make[1]: Leaving directory '/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_597f5/fast' failed
+make: *** [cmTC_597f5/fast] Error 2
+
+
+Determining if the include file dwarf.h exists failed with the following output:
+Change Dir: /home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_700b1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_700b1.dir/build.make CMakeFiles/cmTC_700b1.dir/build
+make[1]: Entering directory '/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_700b1.dir/CheckIncludeFile.c.o
+/usr/bin/cc  -D_GNU_SOURCE  -fPIE   -o CMakeFiles/cmTC_700b1.dir/CheckIncludeFile.c.o   -c /home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:19: fatal error: dwarf.h: No such file or directory
+compilation terminated.
+CMakeFiles/cmTC_700b1.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_700b1.dir/CheckIncludeFile.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_700b1.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_700b1/fast' failed
+make: *** [cmTC_700b1/fast] Error 2
+
+
+Determining if the include file libdwarf/dwarf.h exists failed with the following output:
+Change Dir: /home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_bbd79/fast"
+/usr/bin/make -f CMakeFiles/cmTC_bbd79.dir/build.make CMakeFiles/cmTC_bbd79.dir/build
+make[1]: Entering directory '/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bbd79.dir/CheckIncludeFile.c.o
+/usr/bin/cc  -D_GNU_SOURCE  -fPIE   -o CMakeFiles/cmTC_bbd79.dir/CheckIncludeFile.c.o   -c /home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:28: fatal error: libdwarf/dwarf.h: No such file or directory
+compilation terminated.
+CMakeFiles/cmTC_bbd79.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_bbd79.dir/CheckIncludeFile.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_bbd79.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_bbd79/fast' failed
+make: *** [cmTC_bbd79/fast] Error 2
+
+

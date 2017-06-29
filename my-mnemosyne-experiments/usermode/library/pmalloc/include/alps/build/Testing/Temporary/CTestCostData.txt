@@ -1,0 +1,12 @@
+tmpfs_test_options 1 0.0708339
+tmpfs_test_os 1 0.0122621
+tmpfs_test_bitmap 1 0.00696611
+tmpfs_test_extentheap 1 0.0507801
+tmpfs_test_extentinterval 1 0.00327492
+tmpfs_test_extentmap 1 0.00640988
+tmpfs_test_freespacemap 1 0.005867
+tmpfs_test_hybridheap 1 0.0173528
+tmpfs_test_pointer 1 0.00571299
+tmpfs_test_slab 1 0.00571895
+tmpfs_test_slabheap 1 0.0156431
+---

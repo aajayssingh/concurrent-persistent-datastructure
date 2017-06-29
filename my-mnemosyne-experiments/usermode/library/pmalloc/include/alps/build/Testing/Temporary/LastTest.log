@@ -1,0 +1,487 @@
+Start testing: Jun 26 16:33 CEST
+----------------------------------------------------------
+1/11 Testing: tmpfs_test_options
+1/11 Test: tmpfs_test_options
+Command: "/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/test/unit/common/test_options"
+Directory: /home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/test/unit/common
+"tmpfs_test_options" start time: Jun 26 16:33 CEST
+Output:
+----------------------------------------------------------
+[==========] Running 6 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 6 tests from TestOptions
+[ RUN      ] TestOptions.load_default
+[       OK ] TestOptions.load_default (1 ms)
+[ RUN      ] TestOptions.load
+[       OK ] TestOptions.load (0 ms)
+[ RUN      ] TestOptions.load_allow_missing
+[       OK ] TestOptions.load_allow_missing (1 ms)
+[ RUN      ] TestOptions.load_multiple
+[       OK ] TestOptions.load_multiple (0 ms)
+[ RUN      ] TestOptions.load_child
+[       OK ] TestOptions.load_child (1 ms)
+[ RUN      ] TestOptions.save
+[       OK ] TestOptions.save (11 ms)
+[----------] 6 tests from TestOptions (14 ms total)
+
+[----------] Global test environment tear-down
+[==========] 6 tests from 1 test case ran. (15 ms total)
+[  PASSED  ] 6 tests.
+<end of output>
+Test time =   0.07 sec
+----------------------------------------------------------
+Test Passed.
+"tmpfs_test_options" end time: Jun 26 16:33 CEST
+"tmpfs_test_options" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/11 Testing: tmpfs_test_os
+2/11 Test: tmpfs_test_os
+Command: "/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/test/unit/common/test_os"
+Directory: /home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/test/unit/common
+"tmpfs_test_os" start time: Jun 26 16:33 CEST
+Output:
+----------------------------------------------------------
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from Process
+[ RUN      ] Process.process_map
+[       OK ] Process.process_map (1 ms)
+[----------] 1 test from Process (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (1 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"tmpfs_test_os" end time: Jun 26 16:33 CEST
+"tmpfs_test_os" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/11 Testing: tmpfs_test_bitmap
+3/11 Test: tmpfs_test_bitmap
+Command: "/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/test/unit/layers/test_bitmap"
+Directory: /home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/test/unit/layers
+"tmpfs_test_bitmap" start time: Jun 26 16:33 CEST
+Output:
+----------------------------------------------------------
+[==========] Running 7 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 7 tests from BitMap
+[ RUN      ] BitMap.make_len4
+[       OK ] BitMap.make_len4 (0 ms)
+[ RUN      ] BitMap.make_len8
+[       OK ] BitMap.make_len8 (0 ms)
+[ RUN      ] BitMap.make_len12
+[       OK ] BitMap.make_len12 (0 ms)
+[ RUN      ] BitMap.make_len16
+[       OK ] BitMap.make_len16 (0 ms)
+[ RUN      ] BitMap.make_len256
+[       OK ] BitMap.make_len256 (0 ms)
+[ RUN      ] BitMap.set
+[       OK ] BitMap.set (0 ms)
+[ RUN      ] BitMap.clear
+[       OK ] BitMap.clear (0 ms)
+[----------] 7 tests from BitMap (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 7 tests from 1 test case ran. (0 ms total)
+[  PASSED  ] 7 tests.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"tmpfs_test_bitmap" end time: Jun 26 16:33 CEST
+"tmpfs_test_bitmap" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/11 Testing: tmpfs_test_extentheap
+4/11 Test: tmpfs_test_extentheap
+Command: "/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/test/unit/layers/test_extentheap"
+Directory: /home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/test/unit/layers
+"tmpfs_test_extentheap" start time: Jun 26 16:33 CEST
+Output:
+----------------------------------------------------------
+[==========] Running 6 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 6 tests from ExtentHeapTest
+[ RUN      ] ExtentHeapTest.create
+[       OK ] ExtentHeapTest.create (0 ms)
+[ RUN      ] ExtentHeapTest.alloc
+[       OK ] ExtentHeapTest.alloc (0 ms)
+[ RUN      ] ExtentHeapTest.alloc_free
+[       OK ] ExtentHeapTest.alloc_free (0 ms)
+[ RUN      ] ExtentHeapTest.iterator
+[       OK ] ExtentHeapTest.iterator (0 ms)
+[ RUN      ] ExtentHeapTest.alloc_free_random
+[       OK ] ExtentHeapTest.alloc_free_random (2 ms)
+[ RUN      ] ExtentHeapTest.load
+[       OK ] ExtentHeapTest.load (0 ms)
+[----------] 6 tests from ExtentHeapTest (2 ms total)
+
+[----------] Global test environment tear-down
+[==========] 6 tests from 1 test case ran. (45 ms total)
+[  PASSED  ] 6 tests.
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"tmpfs_test_extentheap" end time: Jun 26 16:33 CEST
+"tmpfs_test_extentheap" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/11 Testing: tmpfs_test_extentinterval
+5/11 Test: tmpfs_test_extentinterval
+Command: "/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/test/unit/layers/test_extentinterval"
+Directory: /home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/test/unit/layers
+"tmpfs_test_extentinterval" start time: Jun 26 16:33 CEST
+Output:
+----------------------------------------------------------
+[==========] Running 14 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 14 tests from ExtentInterval
+[ RUN      ] ExtentInterval.merge_right_into_left_1
+[       OK ] ExtentInterval.merge_right_into_left_1 (0 ms)
+[ RUN      ] ExtentInterval.merge_right_into_left_2
+[       OK ] ExtentInterval.merge_right_into_left_2 (0 ms)
+[ RUN      ] ExtentInterval.merge_right_into_left_3
+[       OK ] ExtentInterval.merge_right_into_left_3 (0 ms)
+[ RUN      ] ExtentInterval.merge_right_into_left_4
+[       OK ] ExtentInterval.merge_right_into_left_4 (0 ms)
+[ RUN      ] ExtentInterval.merge_right_into_left_5
+[       OK ] ExtentInterval.merge_right_into_left_5 (0 ms)
+[ RUN      ] ExtentInterval.merge_left_into_right_1
+[       OK ] ExtentInterval.merge_left_into_right_1 (0 ms)
+[ RUN      ] ExtentInterval.merge_left_into_right_2
+[       OK ] ExtentInterval.merge_left_into_right_2 (0 ms)
+[ RUN      ] ExtentInterval.merge_left_into_right_3
+[       OK ] ExtentInterval.merge_left_into_right_3 (0 ms)
+[ RUN      ] ExtentInterval.merge_left_into_right_4
+[       OK ] ExtentInterval.merge_left_into_right_4 (0 ms)
+[ RUN      ] ExtentInterval.merge_left_into_right_5
+[       OK ] ExtentInterval.merge_left_into_right_5 (0 ms)
+[ RUN      ] ExtentInterval.merge_consecutive_1
+[       OK ] ExtentInterval.merge_consecutive_1 (0 ms)
+[ RUN      ] ExtentInterval.merge_consecutive_2
+[       OK ] ExtentInterval.merge_consecutive_2 (0 ms)
+[ RUN      ] ExtentInterval.merge_no_1
+[       OK ] ExtentInterval.merge_no_1 (0 ms)
+[ RUN      ] ExtentInterval.merge_no_2
+[       OK ] ExtentInterval.merge_no_2 (0 ms)
+[----------] 14 tests from ExtentInterval (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 14 tests from 1 test case ran. (0 ms total)
+[  PASSED  ] 14 tests.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"tmpfs_test_extentinterval" end time: Jun 26 16:33 CEST
+"tmpfs_test_extentinterval" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/11 Testing: tmpfs_test_extentmap
+6/11 Test: tmpfs_test_extentmap
+Command: "/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/test/unit/layers/test_extentmap"
+Directory: /home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/test/unit/layers
+"tmpfs_test_extentmap" start time: Jun 26 16:33 CEST
+Output:
+----------------------------------------------------------
+[==========] Running 13 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 13 tests from ExtentMap
+[ RUN      ] ExtentMap.insert_single
+[2017-06-26 16:33:50.549220] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (10, 10)
+[       OK ] ExtentMap.insert_single (0 ms)
+[ RUN      ] ExtentMap.no_merge_lowest_with_next
+[2017-06-26 16:33:50.549311] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (10, 10)
+[2017-06-26 16:33:50.549323] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (0, 9)
+[2017-06-26 16:33:50.549332] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 103) EX_NEXT: (10, 10)
+[       OK ] ExtentMap.no_merge_lowest_with_next (0 ms)
+[ RUN      ] ExtentMap.merge_lowest_with_next
+[2017-06-26 16:33:50.549361] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (10, 10)
+[2017-06-26 16:33:50.549370] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (0, 10)
+[2017-06-26 16:33:50.549378] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 103) EX_NEXT: (10, 10)
+[       OK ] ExtentMap.merge_lowest_with_next (0 ms)
+[ RUN      ] ExtentMap.no_merge_highest_with_prev
+[2017-06-26 16:33:50.549410] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (10, 10)
+[2017-06-26 16:33:50.549419] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (21, 10)
+[2017-06-26 16:33:50.549430] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 100) EX_PREV: (10, 10)
+[       OK ] ExtentMap.no_merge_highest_with_prev (0 ms)
+[ RUN      ] ExtentMap.merge_highest_with_prev
+[2017-06-26 16:33:50.549456] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (10, 10)
+[2017-06-26 16:33:50.549465] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (20, 10)
+[2017-06-26 16:33:50.549475] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 100) EX_PREV: (10, 10)
+[       OK ] ExtentMap.merge_highest_with_prev (0 ms)
+[ RUN      ] ExtentMap.merge_middle_with_prev
+[2017-06-26 16:33:50.549498] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (10, 10)
+[2017-06-26 16:33:50.549507] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (40, 10)
+[2017-06-26 16:33:50.549514] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 100) EX_PREV: (10, 10)
+[2017-06-26 16:33:50.549523] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (20, 10)
+[2017-06-26 16:33:50.549530] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 100) EX_PREV: (10, 10)
+[2017-06-26 16:33:50.549535] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 103) EX_NEXT: (40, 10)
+[       OK ] ExtentMap.merge_middle_with_prev (0 ms)
+[ RUN      ] ExtentMap.no_merge_middle_with_prev
+[2017-06-26 16:33:50.549558] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (10, 10)
+[2017-06-26 16:33:50.549566] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (40, 10)
+[2017-06-26 16:33:50.549574] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 100) EX_PREV: (10, 10)
+[2017-06-26 16:33:50.549582] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (21, 10)
+[2017-06-26 16:33:50.549590] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 100) EX_PREV: (10, 10)
+[2017-06-26 16:33:50.549597] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 103) EX_NEXT: (40, 10)
+[       OK ] ExtentMap.no_merge_middle_with_prev (0 ms)
+[ RUN      ] ExtentMap.merge_lowest_with_next_2
+[2017-06-26 16:33:50.549621] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (10, 10)
+[2017-06-26 16:33:50.549630] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (40, 10)
+[2017-06-26 16:33:50.549638] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 100) EX_PREV: (10, 10)
+[2017-06-26 16:33:50.549646] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (0, 10)
+[2017-06-26 16:33:50.549654] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 103) EX_NEXT: (10, 10)
+[       OK ] ExtentMap.merge_lowest_with_next_2 (0 ms)
+[ RUN      ] ExtentMap.merge_highest_with_prev_2
+[2017-06-26 16:33:50.549677] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (10, 10)
+[2017-06-26 16:33:50.549685] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (40, 10)
+[2017-06-26 16:33:50.549693] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 100) EX_PREV: (10, 10)
+[2017-06-26 16:33:50.549701] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (50, 10)
+[2017-06-26 16:33:50.549709] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 100) EX_PREV: (40, 10)
+[       OK ] ExtentMap.merge_highest_with_prev_2 (0 ms)
+[ RUN      ] ExtentMap.merge_middle_with_prev_and_next
+[2017-06-26 16:33:50.549733] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (10, 10)
+[2017-06-26 16:33:50.549742] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (40, 10)
+[2017-06-26 16:33:50.549750] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 100) EX_PREV: (10, 10)
+[2017-06-26 16:33:50.549758] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (20, 20)
+[2017-06-26 16:33:50.549764] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 100) EX_PREV: (10, 10)
+[2017-06-26 16:33:50.549768] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 103) EX_NEXT: (40, 10)
+[       OK ] ExtentMap.merge_middle_with_prev_and_next (0 ms)
+[ RUN      ] ExtentMap.remove_ge1
+[2017-06-26 16:33:50.549790] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (0, 10)
+[2017-06-26 16:33:50.549798] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (30, 10)
+[2017-06-26 16:33:50.549806] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 100) EX_PREV: (0, 10)
+[2017-06-26 16:33:50.549815] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (10, 10)
+[2017-06-26 16:33:50.549822] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 100) EX_PREV: (0, 10)
+[2017-06-26 16:33:50.549827] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 103) EX_NEXT: (30, 10)
+[2017-06-26 16:33:50.549831] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (80, 10)
+[2017-06-26 16:33:50.549836] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 100) EX_PREV: (30, 10)
+[2017-06-26 16:33:50.549841] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (40, 10)
+[2017-06-26 16:33:50.549845] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 100) EX_PREV: (30, 10)
+[2017-06-26 16:33:50.549849] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 103) EX_NEXT: (80, 10)
+[       OK ] ExtentMap.remove_ge1 (0 ms)
+[ RUN      ] ExtentMap.remove_ge2
+[2017-06-26 16:33:50.549874] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (0, 10)
+[2017-06-26 16:33:50.549883] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (30, 10)
+[2017-06-26 16:33:50.549891] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 100) EX_PREV: (0, 10)
+[2017-06-26 16:33:50.549899] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (50, 10)
+[2017-06-26 16:33:50.549906] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 100) EX_PREV: (30, 10)
+[2017-06-26 16:33:50.549914] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (40, 10)
+[2017-06-26 16:33:50.549922] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 100) EX_PREV: (30, 10)
+[2017-06-26 16:33:50.549929] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 103) EX_NEXT: (50, 10)
+[       OK ] ExtentMap.remove_ge2 (0 ms)
+[ RUN      ] ExtentMap.remove_ge3
+[2017-06-26 16:33:50.549948] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (30, 2)
+[2017-06-26 16:33:50.549956] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (25, 3)
+[2017-06-26 16:33:50.549964] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 103) EX_NEXT: (30, 2)
+[2017-06-26 16:33:50.549973] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (0, 1)
+[2017-06-26 16:33:50.549980] [0x00007f32717e1740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 103) EX_NEXT: (25, 3)
+[       OK ] ExtentMap.remove_ge3 (0 ms)
+[----------] 13 tests from ExtentMap (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 13 tests from 1 test case ran. (1 ms total)
+[  PASSED  ] 13 tests.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"tmpfs_test_extentmap" end time: Jun 26 16:33 CEST
+"tmpfs_test_extentmap" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/11 Testing: tmpfs_test_freespacemap
+7/11 Test: tmpfs_test_freespacemap
+Command: "/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/test/unit/layers/test_freespacemap"
+Directory: /home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/test/unit/layers
+"tmpfs_test_freespacemap" start time: Jun 26 16:33 CEST
+Output:
+----------------------------------------------------------
+[==========] Running 2 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 2 tests from FreeSpaceMapTest
+[ RUN      ] FreeSpaceMapTest.alloc_extent
+[2017-06-26 16:33:50.556201] [0x00007f5e418f3740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (0, 64)
+[2017-06-26 16:33:50.556269] [0x00007f5e418f3740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (1, 63)
+[2017-06-26 16:33:50.556277] [0x00007f5e418f3740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (3, 61)
+[2017-06-26 16:33:50.556282] [0x00007f5e418f3740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (6, 58)
+[2017-06-26 16:33:50.556287] [0x00007f5e418f3740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (6, 57)
+[2017-06-26 16:33:50.556294] [0x00007f5e418f3740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (0, 1)
+[2017-06-26 16:33:50.556300] [0x00007f5e418f3740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 103) EX_NEXT: (6, 58)
+[2017-06-26 16:33:50.556305] [0x00007f5e418f3740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (0, 1)
+[2017-06-26 16:33:50.556310] [0x00007f5e418f3740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (6, 57)
+[2017-06-26 16:33:50.556316] [0x00007f5e418f3740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 100) EX_PREV: (0, 1)
+[2017-06-26 16:33:50.556323] [0x00007f5e418f3740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (10, 54)
+[2017-06-26 16:33:50.556327] [0x00007f5e418f3740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 100) EX_PREV: (0, 1)
+[2017-06-26 16:33:50.556332] [0x00007f5e418f3740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (0, 1)
+[2017-06-26 16:33:50.556337] [0x00007f5e418f3740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (10, 53)
+[2017-06-26 16:33:50.556341] [0x00007f5e418f3740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 100) EX_PREV: (0, 1)
+[2017-06-26 16:33:50.556347] [0x00007f5e418f3740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (10, 53)
+[       OK ] FreeSpaceMapTest.alloc_extent (0 ms)
+[ RUN      ] FreeSpaceMapTest.alloc_extent2
+[2017-06-26 16:33:50.556370] [0x00007f5e418f3740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (0, 64)
+[2017-06-26 16:33:50.556375] [0x00007f5e418f3740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/src/layers/extentmap.cc, 87) INSERT: (62, 2)
+[       OK ] FreeSpaceMapTest.alloc_extent2 (0 ms)
+[----------] 2 tests from FreeSpaceMapTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 2 tests from 1 test case ran. (0 ms total)
+[  PASSED  ] 2 tests.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"tmpfs_test_freespacemap" end time: Jun 26 16:33 CEST
+"tmpfs_test_freespacemap" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/11 Testing: tmpfs_test_hybridheap
+8/11 Test: tmpfs_test_hybridheap
+Command: "/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/test/unit/layers/test_hybridheap"
+Directory: /home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/test/unit/layers
+"tmpfs_test_hybridheap" start time: Jun 26 16:33 CEST
+Output:
+----------------------------------------------------------
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from HybridHeapTest
+[ RUN      ] HybridHeapTest.alloc_free
+[       OK ] HybridHeapTest.alloc_free (1 ms)
+[----------] 1 test from HybridHeapTest (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (8 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"tmpfs_test_hybridheap" end time: Jun 26 16:33 CEST
+"tmpfs_test_hybridheap" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/11 Testing: tmpfs_test_pointer
+9/11 Test: tmpfs_test_pointer
+Command: "/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/test/unit/layers/test_pointer"
+Directory: /home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/test/unit/layers
+"tmpfs_test_pointer" start time: Jun 26 16:33 CEST
+Output:
+----------------------------------------------------------
+[==========] Running 9 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 9 tests from PointerTest
+[ RUN      ] PointerTest.construct
+[       OK ] PointerTest.construct (0 ms)
+[ RUN      ] PointerTest.deref_and_assign1
+[       OK ] PointerTest.deref_and_assign1 (0 ms)
+[ RUN      ] PointerTest.deref_and_assign2
+[       OK ] PointerTest.deref_and_assign2 (0 ms)
+[ RUN      ] PointerTest.simple_assignment
+[       OK ] PointerTest.simple_assignment (0 ms)
+[ RUN      ] PointerTest.assign_virtual
+[       OK ] PointerTest.assign_virtual (0 ms)
+[ RUN      ] PointerTest.assign_array_pptr
+[       OK ] PointerTest.assign_array_pptr (0 ms)
+[ RUN      ] PointerTest.assign_array_tptr
+[       OK ] PointerTest.assign_array_tptr (0 ms)
+[ RUN      ] PointerTest.pointer_to_pointer
+[       OK ] PointerTest.pointer_to_pointer (0 ms)
+[ RUN      ] PointerTest.operators_pointer_arithmetic
+[       OK ] PointerTest.operators_pointer_arithmetic (0 ms)
+[----------] 9 tests from PointerTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 9 tests from 1 test case ran. (0 ms total)
+[  PASSED  ] 9 tests.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"tmpfs_test_pointer" end time: Jun 26 16:33 CEST
+"tmpfs_test_pointer" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/11 Testing: tmpfs_test_slab
+10/11 Test: tmpfs_test_slab
+Command: "/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/test/unit/layers/test_slab"
+Directory: /home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/test/unit/layers
+"tmpfs_test_slab" start time: Jun 26 16:33 CEST
+Output:
+----------------------------------------------------------
+[==========] Running 5 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 5 tests from SlabTest
+[ RUN      ] SlabTest.nvslab
+[       OK ] SlabTest.nvslab (0 ms)
+[ RUN      ] SlabTest.nvslab_alloc_block_130
+[       OK ] SlabTest.nvslab_alloc_block_130 (0 ms)
+[ RUN      ] SlabTest.nvslab_alloc_block_1K
+[       OK ] SlabTest.nvslab_alloc_block_1K (0 ms)
+[ RUN      ] SlabTest.slab_load
+[       OK ] SlabTest.slab_load (0 ms)
+[ RUN      ] SlabTest.slab_alloc_block
+[2017-06-26 16:33:50.586328] [0x00007fa380719740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/include/alps/layers/bits/slab.hh, 306) Allocate block: nvslab: 0x7fa3805cd010 block: 0
+[2017-06-26 16:33:50.586418] [0x00007fa380719740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/include/alps/layers/bits/slab.hh, 306) Allocate block: nvslab: 0x7fa3805cd010 block: 1
+[2017-06-26 16:33:50.586425] [0x00007fa380719740] [info]    (/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/include/alps/layers/bits/slab.hh, 306) Allocate block: nvslab: 0x7fa3805cd010 block: 2
+[       OK ] SlabTest.slab_alloc_block (0 ms)
+[----------] 5 tests from SlabTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 5 tests from 1 test case ran. (0 ms total)
+[  PASSED  ] 5 tests.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"tmpfs_test_slab" end time: Jun 26 16:33 CEST
+"tmpfs_test_slab" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/11 Testing: tmpfs_test_slabheap
+11/11 Test: tmpfs_test_slabheap
+Command: "/home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/test/unit/layers/test_slabheap"
+Directory: /home/ajay/intern-ws/mnemosyne-gcc-alps/usermode/library/pmalloc/include/alps/build/test/unit/layers
+"tmpfs_test_slabheap" start time: Jun 26 16:33 CEST
+Output:
+----------------------------------------------------------
+[==========] Running 2 tests from 2 test cases.
+[----------] Global test environment set-up.
+[----------] 1 test from SlabHeapTest
+[ RUN      ] SlabHeapTest.insert
+[0] (1024, 255, 252)
+[1] (1024, 255, 2), (1024, 255, 127)
+[2] 
+[R] (1024, 255, 255)
+
+[0] (1024, 255, 252)
+[1] (1024, 255, 127)
+[2] (1024, 255, 0)
+[R] (1024, 255, 255)
+
+[       OK ] SlabHeapTest.insert (0 ms)
+[----------] 1 test from SlabHeapTest (0 ms total)
+
+[----------] 1 test from SlabHeapWithExtentHeapTest
+[ RUN      ] SlabHeapWithExtentHeapTest.alloc
+[       OK ] SlabHeapWithExtentHeapTest.alloc (0 ms)
+[----------] 1 test from SlabHeapWithExtentHeapTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 2 tests from 2 test cases ran. (9 ms total)
+[  PASSED  ] 2 tests.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"tmpfs_test_slabheap" end time: Jun 26 16:33 CEST
+"tmpfs_test_slabheap" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jun 26 16:33 CEST

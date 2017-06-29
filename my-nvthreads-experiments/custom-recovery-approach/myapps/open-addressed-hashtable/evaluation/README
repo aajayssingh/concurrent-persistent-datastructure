@@ -1,0 +1,10 @@
+Evaluation done for 10 to 50 threads.
+plot1 : measures the time taken for the customized list.
+plot2: measures the revovery time taken.
+
+
+each thread executes one of the list operations: add, remove and find.
+workload distribution:
+60% --> insert
+20-% --> delete
+20-% --> find

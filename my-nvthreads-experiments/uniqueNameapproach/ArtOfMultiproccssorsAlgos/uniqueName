@@ -1,0 +1,1 @@
+If I have to store the nextnodeinfo and self node info, which is an evident overhead why dont i use the unique next node name in that case to implement my list. That will be least overhead.
