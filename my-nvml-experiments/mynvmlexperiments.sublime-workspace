@@ -4,16 +4,24 @@
 		"selected_items":
 		[
 			[
+				"num_look",
+				"num_lookup_percent"
+			],
+			[
+				"num",
+				"num_delete_percent"
+			],
+			[
+				"num_ins",
+				"num_insert_percent"
+			],
+			[
 				"u",
 				"uint_t"
 			],
 			[
 				"num_",
 				"num_delete"
-			],
-			[
-				"num",
-				"num_threads"
 			],
 			[
 				"KEY",
@@ -156,19 +164,19 @@
 	"buffers":
 	[
 		{
-			"file": "src/examples/libpmemobj/cpp/finegrained-llist/fine-plist.cpp",
+			"file": "src/examples/libpmemobj/cpp/coarsegrained-llist/coarse-plist.cpp",
 			"settings":
 			{
-				"buffer_size": 7991,
+				"buffer_size": 3592,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/examples/libpmemobj/cpp/coarsegrained-llist/coarse-plist.cpp",
+			"file": "src/examples/libpmemobj/cpp/coarsegrained-llist/coarse-plist.h",
 			"settings":
 			{
-				"buffer_size": 8525,
+				"buffer_size": 5501,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -206,16 +214,14 @@
 	},
 	"expanded_folders":
 	[
-		"/home/ajay/intern-ws/nvml-master/src",
-		"/home/ajay/intern-ws/nvml-master/src/examples",
-		"/home/ajay/intern-ws/nvml-master/src/examples/libpmemobj",
-		"/home/ajay/intern-ws/nvml-master/src/examples/libpmemobj/cpp",
-		"/home/ajay/intern-ws/nvml-master/src/examples/libpmemobj/cpp/coarsegrained-llist",
-		"/home/ajay/intern-ws/nvml-master/src/examples/libpmemobj/cpp/finegrained-llist",
-		"/home/ajay/intern-ws/nvml-master/src/examples/libpmemobj/linkedlist"
+		"/home/ajay/intern-ws/PersistentDS-Experiments/my-nvml-experiments/src/examples/libpmemobj",
+		"/home/ajay/intern-ws/PersistentDS-Experiments/my-nvml-experiments/src/examples/libpmemobj/cpp",
+		"/home/ajay/intern-ws/PersistentDS-Experiments/my-nvml-experiments/src/examples/libpmemobj/cpp/coarsegrained-llist"
 	],
 	"file_history":
 	[
+		"/home/ajay/intern-ws/PersistentDS-Experiments/my-nvml-experiments/src/examples/libpmemobj/cpp/coarsegrained-llist/coarse-plist.cpp",
+		"/home/ajay/intern-ws/PersistentDS-Experiments/my-nvml-experiments/src/examples/libpmemobj/cpp/finegrained-llist/fine-plist.cpp",
 		"/home/ajay/intern-ws/nvml-master/src/examples/libpmemobj/cpp/coarsegrained-llist/coarse-plist.cpp",
 		"/home/ajay/intern-ws/nvml-master/src/examples/libpmemobj/cpp/finegrained-llist/fine-plist",
 		"/home/ajay/intern-ws/nvml-master/src/examples/libpmemobj/cpp/plist.cpp",
@@ -341,9 +347,7 @@
 		"/home/ajay/aj-workspace/internship-ws/code-ws/nvthreads-master/src/include/xrun.h",
 		"/home/ajay/aj-workspace/internship-ws/code-ws/nvthreads-master/src/source/libdthread.cpp",
 		"/home/ajay/aj-workspace/internship-ws/code-ws/nvthreads-master/tests/recover/recover_aggr.c",
-		"/home/ajay/Downloads/ConcLinkedList-master/src/linkedlist-lock/main.c",
-		"/home/ajay/aj-workspace/internship-ws/code-ws/nvthreads-master/tests/recover/recover_list.c",
-		"/home/ajay/aj-workspace/internship-ws/code-ws/nvthreads-master/tests/large_malloc/over4g.c"
+		"/home/ajay/Downloads/ConcLinkedList-master/src/linkedlist-lock/main.c"
 	],
 	"find":
 	{
@@ -378,6 +382,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"examples::",
 			"ajlock",
 			"uint64_t",
 			"NUM_THREADS",
@@ -504,8 +509,7 @@
 			"MAP_ACC",
 			"createSharedMapFile",
 			"open",
-			"mmap",
-			"Type"
+			"mmap"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -513,6 +517,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"",
 			"uint_t",
 			"num_threads",
 			"uint_t",
@@ -537,7 +542,7 @@
 	"folders":
 	[
 		{
-			"path": "/home/ajay/intern-ws/nvml-master"
+			"path": "/home/ajay/intern-ws/PersistentDS-Experiments/my-nvml-experiments/src/examples/libpmemobj"
 		}
 	],
 	"groups":
@@ -548,19 +553,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "src/examples/libpmemobj/cpp/finegrained-llist/fine-plist.cpp",
+					"file": "src/examples/libpmemobj/cpp/coarsegrained-llist/coarse-plist.cpp",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7991,
+						"buffer_size": 3592,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5074,
-								5074
+								3003,
+								3003
 							]
 						],
 						"settings":
@@ -569,7 +574,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 4474.0,
+						"translation.y": 1944.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -577,19 +582,19 @@
 				},
 				{
 					"buffer": 1,
-					"file": "src/examples/libpmemobj/cpp/coarsegrained-llist/coarse-plist.cpp",
+					"file": "src/examples/libpmemobj/cpp/coarsegrained-llist/coarse-plist.h",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8525,
+						"buffer_size": 5501,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5498,
-								5498
+								387,
+								387
 							]
 						],
 						"settings":
@@ -598,7 +603,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3834.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -684,7 +689,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 294.0,
+	"side_bar_width": 183.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

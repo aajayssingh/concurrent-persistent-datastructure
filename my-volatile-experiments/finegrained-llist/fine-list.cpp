@@ -3,14 +3,10 @@
  * This implements a persistent concurrent set.
  * author: Ajay Singh
  */
-#include <fine-plist.h>
-#include <thread>
-#include <mutex>              // std::mutex, std::unique_lock
-#include <condition_variable> // std::condition_variable
-#include <sys/time.h>
+#include "fine-list.h"
 
 //DEFAULT VALUES
-const uint_t num_threads = 10; /*multiple of 10 the better, for exact thread distribution */
+const uint_t num_threads = 50; /*multiple of 10 the better, for exact thread distribution */
 
 /*should sum upto 100*/
 uint_t num_insert_percent = 50;
@@ -18,8 +14,9 @@ uint_t num_delete_percent = 40;
 uint_t num_lookup_percent = 10;
 uint_t num_insert, num_delete, num_lookup;
 
-pool<pmem_list> pop;
+volatile_list list;
 std::thread t[num_threads];
+
 
 /*************************Barrier code begins*****************************/
 std::mutex mtx;
@@ -46,25 +43,23 @@ void worker(uint_t tid)
 	//barrier to synchronise all threads for a coherent launch :)
 	wait_for_launch();
 
-	auto q = pop.get_root();
-	
 	if(tid < num_insert)
 	{
 		uint_t key = rand()%(MAX_KEY - 1) + 1;
 		uint_t val = rand()%(MAX_KEY - 1) + 1;
-		q->insert(pop, key, val);
+		list.insert(key, val);
 	}
 	else if(tid < (num_insert + num_delete ))
     {
     	uint_t key = rand()%(MAX_KEY - 1) + 1;
 		uint_t val;
-		q->remove(pop, key, &val);
+		list.remove(key, &val);
     }
 	else if(tid < (num_insert + num_delete + num_lookup))//init for lookup threads
 	{
 		uint_t key = rand()%(MAX_KEY - 1) + 1;
 		uint_t val;
-		q->find(pop, key, &val);
+		list.find(key, &val);
 	}
 	else
 	{
@@ -78,19 +73,18 @@ main(int argc, char *argv[])
 	double duration;
 	struct timeval start_time, end_time;
 
-	if (argc < 2) {
+	if (argc < 1) {
 		std::cerr << "usage: " << argv[0]
-			  << " file-name "
 			  << " [insert percentage "
 			  << " delete percentage "
 			  << " lookup percentage] " << std::endl;
 		return 1;
 	}
 
-	if(argc == 5){
-		num_insert_percent = atoll(argv[2]);
-		num_delete_percent = atoll(argv[3]);
-		num_lookup_percent = atoll(argv[4]);
+	if(argc == 4){
+		num_insert_percent = atoll(argv[1]);
+		num_delete_percent = atoll(argv[2]);
+		num_lookup_percent = atoll(argv[3]);
 	}
 
 	if((num_insert_percent + num_delete_percent + num_lookup_percent) != 100)
@@ -99,40 +93,21 @@ main(int argc, char *argv[])
 		return 0;
 	}
 
-	const char *path = argv[1];
-	if (file_exists(path) != 0) 
-	{
-		pop = pool<pmem_list>::create(path, LAYOUT, AJPMEMOBJ_MIN_POOL, CREATE_MODE_RW);
-	} 
-	else
-	{
-		pop = pool<pmem_list>::open(path, LAYOUT);
-	}
 
-	auto q = pop.get_root();
 	time_t tt;
 	srand(time(&tt));
 
-	if(!q->is_inited())
+	std::cout <<"init the list first!" <<std::endl;
+	list.init();
+	for (uint_t i = 0; i < 2; ++i)
 	{
-		std::cout <<"init the list first!" <<std::endl;
-		q->init(pop);
-		for (uint_t i = 0; i < 2; ++i)
-		{
-			uint_t key = rand()%(MAX_KEY-1) + 1;
-			uint_t val = rand()%(MAX_KEY-1) + 1;		
-			q->insert(pop, key, val);
-		}
-
-		q->print();
-		return 0;
-	}
-	else
-	{
-		std::cout <<"list already inited, carry on operations" <<std::endl;
-		q->print();
+		uint_t key = rand()%(MAX_KEY-1) + 1;
+		uint_t val = rand()%(MAX_KEY-1) + 1;		
+		list.insert(key, val);
 	}
 
+	list.print();
+		
 	num_insert = (uint_t)ceil((num_insert_percent*num_threads)/100);
 	num_delete = (uint_t)ceil((num_delete_percent*num_threads)/100);
 	num_lookup = (uint_t)ceil((num_lookup_percent*num_threads)/100);
@@ -144,9 +119,6 @@ main(int argc, char *argv[])
 		std::cout<<"((insertNum + delNum + lookupNum) > number_of_threads)"<<std::endl;
 		return 0;
 	}
-	//q->print();
-
-	//std::cout <<"\n********STARTING...\n";	
 	
 	for (uint_t i = 0; i < num_threads; ++i)
 	{
@@ -164,8 +136,7 @@ main(int argc, char *argv[])
 	gettimeofday(&end_time, NULL);
 	std::cout <<"\n********STOPPING...\n";
 
-	q->print();
-	pop.close();
+	list.print();
 
 	duration = (end_time.tv_sec - start_time.tv_sec);
 	duration += (end_time.tv_usec - start_time.tv_usec)/ 1000000.0;
