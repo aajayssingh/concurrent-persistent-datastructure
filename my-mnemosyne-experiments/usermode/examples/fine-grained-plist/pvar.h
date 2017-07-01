@@ -20,7 +20,7 @@
 /**************************************************************************************/
 #define MIN_KEY 0
 #define MAX_KEY 100
-#define NUM_THREADS 2
+#define NUM_THREADS 10
 typedef unsigned int uint;
 
 typedef struct _node //the name _node is not meant to be used outside the file
