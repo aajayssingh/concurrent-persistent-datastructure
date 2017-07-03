@@ -10,7 +10,7 @@
 #include <sys/time.h>
 
 //DEFAULT VALUES
-const uint_t num_threads = 10; /*multiple of 10 the better, for exact thread distribution */
+const uint_t num_threads = 50; /*multiple of 10 the better, for exact thread distribution */
 
 /*should sum upto 100*/
 uint_t num_insert_percent = 50;
@@ -77,6 +77,17 @@ main(int argc, char *argv[])
 {
 	double duration;
 	struct timeval start_time, end_time;
+	#ifdef TIME_EVAL
+	FILE *fptr;
+	char buf[10];
+	sprintf(buf, "%lu", num_threads);
+	fptr = fopen(buf,"a");
+	if(fptr == NULL)
+	{
+		printf("Error!");   
+		exit(1);             
+	}
+	#endif
 
 	if (argc < 2) {
 		std::cerr << "usage: " << argv[0]
@@ -113,7 +124,7 @@ main(int argc, char *argv[])
 	time_t tt;
 	srand(time(&tt));
 
-	if(!q->is_inited())
+	if(1/*!q->is_inited()*/)
 	{
 		std::cout <<"init the list first!" <<std::endl;
 		q->init(pop);
@@ -125,7 +136,7 @@ main(int argc, char *argv[])
 		}
 
 		q->print();
-		return 0;
+		//return 0;
 	}
 	else
 	{
@@ -170,6 +181,10 @@ main(int argc, char *argv[])
 	duration = (end_time.tv_sec - start_time.tv_sec);
 	duration += (end_time.tv_usec - start_time.tv_usec)/ 1000000.0;
 	std::cout<<"time: "<<duration<<"seconds"<<std::endl;
+	#ifdef TIME_EVAL
+	fprintf(fptr,"%lf\n",duration);
+	fclose(fptr);
+	#endif
 
 	return 0;
 }

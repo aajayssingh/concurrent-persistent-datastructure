@@ -1,3 +1,6 @@
+#ifndef COARSE_LIST_H
+#define COARSE_LIST_H
+
 #include <iostream>
 #include <thread>
 #include <mutex>              // std::mutex, std::unique_lock
@@ -8,7 +11,7 @@
 //#define LAYOUT "plist"
 #define MIN_KEY 0
 #define MAX_KEY 100
-//#define AJPMEMOBJ_MIN_POOL ((size_t)(1024 * 1024 * 1024 * 1)) /*1 GB*/
+#define TIME_EVAL
 typedef uint64_t uint_t;
 
 class volatile_list {
@@ -190,3 +193,4 @@ public:
 			std::cout << n->key << std::endl;
 	}
 };
+#endif

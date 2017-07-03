@@ -162,6 +162,18 @@ int main (int argc, char const *argv[])
 {
 	time_t tt;
 	srand(time(&tt));
+	#ifdef TIME_EVAL
+	FILE *fptr;
+	char buf[10];
+	sprintf(buf, "%d", NUM_THREADS);
+	fptr = fopen(buf,"a");
+	if(fptr == NULL)
+	{
+		printf("Error!");   
+		exit(1);             
+	}
+	#endif
+	PSET(flag, 0);
 
 	printf("persistent flag: %d\n", PGET(flag));
 	printf("persistent list addr: %p\n", (list_t*)PADDR(mylist));
@@ -205,5 +217,9 @@ int main (int argc, char const *argv[])
 	duration += ( end_time.tv_usec - start_time.tv_usec)/ 1000000.0;
 
 	printf("time: %lf seconds\n", duration);
+	#ifdef TIME_EVAL
+	fprintf(fptr,"%lf\n",duration);
+	fclose(fptr);
+	#endif
 	return 0;
 }

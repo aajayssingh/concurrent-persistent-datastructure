@@ -17,7 +17,8 @@
 #define MIN_KEY 0
 #define MAX_KEY 100
 #define AJPMEMOBJ_MIN_POOL ((size_t)(1024 * 1024 * 1024 * 1)) /*1 GB*/
-typedef uint uint_t;
+#define TIME_EVAL
+typedef uint64_t uint_t;
 
 
 using nvml::obj::p;

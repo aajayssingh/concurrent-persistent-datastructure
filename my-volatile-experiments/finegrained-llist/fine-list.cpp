@@ -72,6 +72,17 @@ main(int argc, char *argv[])
 {
 	double duration;
 	struct timeval start_time, end_time;
+	#ifdef TIME_EVAL
+	FILE *fptr;
+	char buf[50];
+	sprintf(buf, "time%lu.txt", num_threads);
+	fptr = fopen(buf,"a");
+	if(fptr == NULL)
+	{
+		printf("Error!");   
+		exit(1);             
+	}
+	#endif
 
 	if (argc < 1) {
 		std::cerr << "usage: " << argv[0]
@@ -99,7 +110,7 @@ main(int argc, char *argv[])
 
 	std::cout <<"init the list first!" <<std::endl;
 	list.init();
-	for (uint_t i = 0; i < 2; ++i)
+	for (uint_t i = 0; i < 10; ++i)
 	{
 		uint_t key = rand()%(MAX_KEY-1) + 1;
 		uint_t val = rand()%(MAX_KEY-1) + 1;		
@@ -141,6 +152,10 @@ main(int argc, char *argv[])
 	duration = (end_time.tv_sec - start_time.tv_sec);
 	duration += (end_time.tv_usec - start_time.tv_usec)/ 1000000.0;
 	std::cout<<"time: "<<duration<<"seconds"<<std::endl;
+	#ifdef TIME_EVAL
+	fprintf(fptr,"%lf\n",duration);
+	fclose(fptr);
+	#endif
 
 	return 0;
 }

@@ -1,0 +1,7 @@
+Eval: update intensive
+i/d/l --> 50/40/10
+init nodes 10
+
+Eval: read intensive
+i/d/l --> 20/10/70
+init nodes 10
