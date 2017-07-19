@@ -1,3 +1,6 @@
+/*
+ * author: Ajay Singh
+ */
 #include <ex_common.h>
 #include <iostream>
 #include <libpmemobj++/make_persistent.hpp>
@@ -7,16 +10,11 @@
 #include <libpmemobj++/transaction.hpp>
 #include <libpmemobj++/mutex.hpp>
 #include <math.h>
-#include <stdexcept>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <sys/stat.h>
 
 
 #define LAYOUT "plist"
 #define MIN_KEY 0
-#define MAX_KEY 100
+#define MAX_KEY 1000
 #define AJPMEMOBJ_MIN_POOL ((size_t)(1024 * 1024 * 1024 * 1)) /*1 GB*/
 #define TIME_EVAL
 typedef uint64_t uint_t;
@@ -29,9 +27,6 @@ using nvml::obj::make_persistent;
 using nvml::obj::delete_persistent;
 using nvml::obj::transaction;
 using nvml::obj::mutex;
-
-// namespace examples
-// {
 
 /*
  * Persistent memory list-based queue
@@ -57,7 +52,9 @@ class pmem_list {
 	mutex global_list_pmutex;
 
 public:
-	
+	/*
+	 * creates the initial list with two sentinel nodes: head --->tail
+	 */
 	void
 	init (pool_base &pop)
 	{
@@ -86,72 +83,57 @@ public:
 	}
 
 	/*
-	 * Inserts a new element in the list.
+	 * Inserts a new node<key, val> in the list. If the operation succeeds then return true, 
+	 * otherwise if the node<key> is already present return false.
 	 */
 	bool
 	insert(pool_base &pop, uint_t key, uint_t val)
 	{
 		bool ret = false;
 		this->global_list_pmutex.lock();
-			//std::cout<<"ADD entered CS key:"<<key <<std::endl;
-		 	
-			auto pred = head;
-			auto curr = pred->next;
+		auto pred = head;
+		auto curr = pred->next;
 
-			while(curr->key < key)
-			{
-				pred = curr;
-				curr = curr->next;
-			}
+		while(curr->key < key)
+		{
+			pred = curr;
+			curr = curr->next;
+		}
 
-			if(curr->key == key)
-			{
-				ret = false;
-				std::cout<<"Node with key:"<<key<<" already present" <<std::endl;
-			}
-			else
-			{
-				persistent_ptr<pmem_entry> newPnode;
-				
-				transaction::exec_tx(pop, [&] {
-					auto n =  make_persistent<pmem_entry>();
-					newPnode = n;
-					newPnode->key = key;
-					newPnode->val = val;
-					newPnode->next =curr;
-					pred->next = newPnode;
-					std::cout<<"INSERT: <pred:curr>: "<< pred->key<<":"<<curr->key <<" --> INSERT <key:val> "<< key<<":"<<val <<std::endl;
-				});
-
-		//		std::cout<<"ADD: <key:val>"<<key <<":"<<val <<std::endl;
-//				transaction::exec_tx(pop, [&] {});
-			//	transaction::exec_tx(pop, [&] { //TODO: try adding the rane manually with manual Tx.
-			//		pred->next = newPnode;
-			//	});
-
-//	REPORT PROB:
-//with this manual TX the second thread is unable to add node, runs successfully 
-//but node not added, the problem is revealed by C++ binding, it says that 
-//cannot add object to the transaction for second thread while setting pred->next = newNode.
-
-				ret = true;
-			}
-			//std::cout<<"ADD gonna exit CS"<<key <<std::endl;
-			//print();
-			this->global_list_pmutex.unlock();
+		if(curr->key == key)
+		{
+			ret = false;
+			std::cout<<"Node with key:"<<key<<" already present" <<std::endl;
+		}
+		else
+		{
+			persistent_ptr<pmem_entry> newPnode;
+			
+			transaction::exec_tx(pop, [&] {
+				auto n =  make_persistent<pmem_entry>();
+				newPnode = n;
+				newPnode->key = key;
+				newPnode->val = val;
+				newPnode->next =curr;
+				pred->next = newPnode;
+				std::cout<<"INSERT: <pred:curr>: "<< pred->key<<":"<<curr->key <<" --> INSERT <key:val> "<< key<<":"<<val <<std::endl;
+			});
+			ret = true;
+		}
+		this->global_list_pmutex.unlock();
 
 		return ret;
 	}
 
-	/*
-	 * Removes the element from the list.
-	 */
+/*
+* Removes the node<key> from the list. If the node is present remove it and return true along with the node<val>, 
+* else just return false.
+*/
 	bool remove(pool_base &pop, uint_t key, uint_t* val)
 	{
 		bool ret = false;
 		*val = 0;
 		this->global_list_pmutex.lock();
-//		std::cout<<"DELETE entered CS"<<key <<std::endl;
 			if ((head == nullptr) || (tail == nullptr))
 				transaction::abort(EINVAL);
 
@@ -168,13 +150,11 @@ public:
 			{
 				auto n = curr;
 				*val = n->key;
-				//pred->next = curr->next;
-transaction::exec_tx(pop, [&] {
-				pred->next = curr->next;
-				//std::cout<<"inTX"<<std::endl;
-				delete_persistent<pmem_entry>(n);
-				std::cout <<"***DELETE: Deleted :) <key:val> "<<key<<":"<<*val<< std::endl;
-	});
+				transaction::exec_tx(pop, [&] {
+							pred->next = curr->next;
+							delete_persistent<pmem_entry>(n);
+							std::cout <<"***DELETE: Deleted :) <key:val> "<<key<<":"<<*val<< std::endl;
+				});
 				ret = true;
 			}
 			else
@@ -182,48 +162,45 @@ transaction::exec_tx(pop, [&] {
 				ret = false;
 				std::cout <<"***DELETE: Not Deleted <key:val> "<<key<<":"<<*val<< std::endl;
 			}
-
-//			std::cout<<"DELETE gonna exit CS"<<key<<":" <<*val <<std::endl;
 			this->global_list_pmutex.unlock();
 		return ret;
 	}
 
 	/*
-	 * finds the element in the list.
+	 * finds the node<key> in the list. If found return true along with node<val> corresponding to the desired key
+	 * Else return false.
 	 */
 	bool find(pool_base &pop, uint_t key, uint_t* val)
 	{
 		bool ret = false;
 		*val = 0;
 		this->global_list_pmutex.lock();
-		//std::cout<<"FIND entered CS"<<key <<std::endl;
-			if ((head == nullptr) || (tail == nullptr))
-				transaction::abort(EINVAL);
+		if ((head == nullptr) || (tail == nullptr))
+			transaction::abort(EINVAL);
 
-			auto pred = head;
-			auto curr = pred->next;
+		auto pred = head;
+		auto curr = pred->next;
 
-			while(curr->key < key)
-			{
-				pred = curr;
-				curr = curr->next;
-			}
+		while(curr->key < key)
+		{
+			pred = curr;
+			curr = curr->next;
+		}
 
-			if(curr->key == key)
-			{
-				auto n = curr;
-				*val = n->key;
-				std::cout <<"***FIND: found <key:val> "<<key<<":"<<*val<< std::endl;
-				ret = true;
-			}
-			else
-			{
-				ret = false;
-				std::cout <<"***FIND: Not found <key:val> "<<key<<":"<<*val<< std::endl;
-			}
+		if(curr->key == key)
+		{
+			auto n = curr;
+			*val = n->key;
+			std::cout <<"***FIND: found <key:val> "<<key<<":"<<*val<< std::endl;
+			ret = true;
+		}
+		else
+		{
+			ret = false;
+			std::cout <<"***FIND: Not found <key:val> "<<key<<":"<<*val<< std::endl;
+		}
 
-			//std::cout<<"FIND gonna exit CS"<<key<<":" <<*val <<std::endl;
-			this->global_list_pmutex.unlock();
+		this->global_list_pmutex.unlock();
 
 		return ret;
 	}
@@ -240,11 +217,12 @@ transaction::exec_tx(pop, [&] {
 			std::cout << n->key << std::endl;
 	}
 
+	/*
+	 * checks if the list is already present in NVM.
+	 */
 	bool
 	is_inited(void)
 	{
 		return is_init;
 	}
 };
-
-//} /* namespace examples */

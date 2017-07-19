@@ -1,7 +1,5 @@
 /*!
- * \file
- *
- * \author Sanketh Nalli <nalli@wisc.edu>
+* Author: Ajay Singh
  */
 
 #ifndef __PVAR_H__
@@ -19,7 +17,7 @@
 //List Global declarations
 /**************************************************************************************/
 #define MIN_KEY 0
-#define MAX_KEY 100
+#define MAX_KEY 1000
 #define NUM_THREADS 50
 #define TIME_EVAL
 typedef unsigned int uint;
@@ -48,9 +46,6 @@ uint find (list_t *list, uint key, uint* val);
 
 void print_list(const list_t *list);
 
-
-
-
 #define TM_SAFE __attribute__((transaction_safe))
 #define TM_CALL __attribute__((transaction_callable))
 #define TM_PURE __attribute__((transaction_pure))
@@ -66,20 +61,19 @@ void __assert_fail (const char *__assertion, const char *__file,
      __THROW __attribute__ ((__noreturn__));
 
 
-
 #ifdef __PVAR_C__
 
 #define PVAR(type, var) \
-        MNEMOSYNE_PERSISTENT type var;  		\
-        TM_ATTR type pset_##var(type __##var) 		\
-			{ return (var = __##var); }	\
-        TM_ATTR type pget_##var() { return var; }	\
+        MNEMOSYNE_PERSISTENT type var;      \
+        TM_ATTR type pset_##var(type __##var)     \
+      { return (var = __##var); } \
+        TM_ATTR type pget_##var() { return var; } \
         TM_ATTR void* paddr_##var() { return (void*)&var; }
 
 #else /* !__PVAR_C__ */
 
 #define PVAR(type, var) \
-        extern MNEMOSYNE_PERSISTENT type var;  	\
+        extern MNEMOSYNE_PERSISTENT type var;   \
         extern TM_ATTR type pset_##var(type);   \
         extern TM_ATTR type pget_##var();       \
         extern TM_ATTR void* paddr_##var();
@@ -99,8 +93,5 @@ void __assert_fail (const char *__assertion, const char *__file,
  */
 PVAR(int, flag);
 PVAR(list_t, mylist);
-
-
-
 
 #endif /* __PVAR_H__ */

@@ -1,3 +1,6 @@
+/*
+ * author: Ajay Singh
+ */
 #include <ex_common.h>
 #include <iostream>
 #include <libpmemobj++/make_persistent.hpp>
@@ -7,15 +10,10 @@
 #include <libpmemobj++/transaction.hpp>
 #include <libpmemobj++/mutex.hpp>
 #include <math.h>
-#include <stdexcept>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <sys/stat.h>
 
 #define LAYOUT "plist"
 #define MIN_KEY 0
-#define MAX_KEY 100
+#define MAX_KEY 1000
 #define AJPMEMOBJ_MIN_POOL ((size_t)(1024 * 1024 * 1024 * 1)) /*1 GB*/
 #define TIME_EVAL
 typedef uint64_t uint_t;
@@ -54,7 +52,9 @@ class pmem_list {
 	mutex global_list_pmutex;
 
 public:
-	
+	/*
+	 * creates the initial list with two sentinel nodes: head --->tail
+	 */
 	void
 	init (pool_base &pop)
 	{
@@ -83,7 +83,8 @@ public:
 	}
 
 	/*
-	 * Inserts a new element in the list.
+	 * Inserts a new node<key, val> in the list. If the operation succeeds then return true, 
+	 * otherwise if the node<key> is already present return false.
 	 */
 	bool
 	insert(pool_base &pop, uint_t key, uint_t val)
@@ -103,7 +104,6 @@ public:
 			curr->local_node_pmutex.lock();
 		}
 
-		//std::cout<<"ADD: entered CS key:"<<key <<std::endl;
 		if(curr->key == key)
 		{
 			ret = false;
@@ -121,25 +121,18 @@ public:
 				pred->next = newPnode;
 				std::cout<<"INSERT: <pred:curr>: "<< pred->key<<":"<<curr->key <<" --> INSERT <key:val> "<< key<<":"<<val <<std::endl;
 			});
-
-		//	transaction::exec_tx(pop, [&] { //TODO: try adding the rane manually with manual Tx.
-//				pred->next = newPnode;
-		//	});
-
 			ret = true;
 		}
 
-		//pthread_exit(NULL);
 		curr->local_node_pmutex.unlock();
 		pred->local_node_pmutex.unlock();
-		//this->global_list_pmutex.unlock();
-//	});		
 		return ret;
 	}
 
-	/*
-	 * Removes the element from the list.
-	 */
+/*
+* Removes the node<key> from the list. If the node is present remove it and return true along with the node<val>, 
+* else just return false.
+*/
 	bool remove(pool_base &pop, uint_t key, uint_t* val)
 	{
 		bool ret = false;
@@ -183,7 +176,8 @@ public:
 	}
 
 	/*
-	 * finds the element in the list.
+	 * finds the node<key> in the list. If found return true along with node<val> corresponding to the desired key
+	 * Else return false.
 	 */
 	bool find(pool_base &pop, uint_t key, uint_t* val)
 	{
@@ -224,7 +218,7 @@ public:
 
 
 	/*
-	 * Prints the entire contents of the queue.
+	 * Prints the entire contents of the list.
 	 */
 	void
 	print(void) const
@@ -234,6 +228,9 @@ public:
 			std::cout << n->key << std::endl;
 	}
 
+	/*
+	 * checks if the list is already present in NVM.
+	 */
 	bool
 	is_inited(void)
 	{

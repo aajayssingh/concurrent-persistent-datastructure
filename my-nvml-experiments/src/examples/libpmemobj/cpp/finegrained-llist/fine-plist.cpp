@@ -1,6 +1,7 @@
 /*
  * coarse-plist.cpp
- * This implements a persistent concurrent set.
+ * This implements a persistent concurrent set using a linked list. The algorithm code follows Art of multiprocessor programming
+ * book, chapter 9.
  * author: Ajay Singh
  */
 #include <fine-plist.h>
@@ -28,7 +29,6 @@ bool launch = false;
 void wait_for_launch()
 {
 	std::unique_lock<std::mutex> lck(mtx);
-	//printf("locked-waiting\n");
 	while (!launch) cv.wait(lck);
 }
 
@@ -36,10 +36,8 @@ void shoot()
 {
 	std::unique_lock<std::mutex> lck(mtx);
 	launch = true;
-	//printf("main locked-notify\n");
 	cv.notify_all();
 }
-/*************************Barrier code ends*****************************/
 
 void worker(uint_t tid)
 {
@@ -124,7 +122,7 @@ main(int argc, char *argv[])
 	time_t tt;
 	srand(time(&tt));
 
-	if(1/*!q->is_inited()*/)
+	if(!q->is_inited())
 	{
 		std::cout <<"init the list first!" <<std::endl;
 		q->init(pop);
@@ -136,7 +134,6 @@ main(int argc, char *argv[])
 		}
 
 		q->print();
-		//return 0;
 	}
 	else
 	{
@@ -144,6 +141,7 @@ main(int argc, char *argv[])
 		q->print();
 	}
 
+	//thread distribution
 	num_insert = (uint_t)ceil((num_insert_percent*num_threads)/100);
 	num_delete = (uint_t)ceil((num_delete_percent*num_threads)/100);
 	num_lookup = (uint_t)ceil((num_lookup_percent*num_threads)/100);
@@ -155,9 +153,6 @@ main(int argc, char *argv[])
 		std::cout<<"((insertNum + delNum + lookupNum) > number_of_threads)"<<std::endl;
 		return 0;
 	}
-	//q->print();
-
-	//std::cout <<"\n********STARTING...\n";	
 	
 	for (uint_t i = 0; i < num_threads; ++i)
 	{

@@ -114,10 +114,10 @@ int main (int argc, char const *argv[])
 		if (PGET(flag) == 0) {
 			PSET(flag, 1);
 			printf("INIT LIST: \n");
-			init();
+			//init();
 		} else {
 			printf("LIST ALREADY INITED: \n");
-			recover_init();
+			//recover_init();
 
 			// adder();
 			// print_list(((list_t*)PADDR(mylist)));
@@ -126,15 +126,15 @@ int main (int argc, char const *argv[])
 			// uint key = rand()%(MAX_KEY - 1) + 1;
 			// uint val = rand()%(MAX_KEY - 1) + 1;
 			// uint res = insert(((list_t*)PADDR(mylist)), key, val);
-			//PSET(flag, 0);
+			PSET(flag, 0);
 		}
 	}
 	
 	printf(" --> %d\n", PGET(flag));
 	printf("&persistent flag = %p\n", PADDR(flag));
 
-	printf("\nstarting malloc bench\n");
-	malloc_bench();
-	print_list(((list_t*)PADDR(mylist)));
+	//printf("\nstarting malloc bench\n");
+	//malloc_bench();
+	//print_list(((list_t*)PADDR(mylist)));
 	return 0;
 }

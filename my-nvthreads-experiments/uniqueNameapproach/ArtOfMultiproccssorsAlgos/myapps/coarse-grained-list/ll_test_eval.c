@@ -20,7 +20,7 @@ using namespace std;
 
 list_t *list;
 pthread_mutex_t gm;
-unsigned int num_threads = 1;//caution : number of threads must be less than VAL_MAX testing for rand()
+unsigned int num_threads = 10;//caution : number of threads must be less than VAL_MAX testing for rand()
 struct thread_data {
     int tid;
 };
