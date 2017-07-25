@@ -3,11 +3,29 @@ The rep consists of my experiments with SCM/NVM programming libraries namely,
 					NVML	  [2]
 					Mnemosyne [3]
 Using above libraries following concurrent persistent DS has been implemented:
-					coarse grained persistent Set.
-					fine grained persistent Set.
+[1]NVThreads: various approaches with NVthreads some including changes in the library itself
+					+coarse grained persistent List.
+					+fine grained persistent List.
+					+open addressed hash Table.
+					
+[2]NVML:
+					+coarse-grained persistent List.
+					+fine-grained persistent List.
+					+closed addressed coarse-grained hash Table.
+					+closed addressed fine-grained hash Table.
+
+[3]Mnemosyne:
+					+coarse-grained persistent List.
+					+fine-grained persistent List.
+					+closed addressed coarse-grained hash Table.
+					+closed addressed fine-grained hash Table.
+[4]Volatile DS:
+					+coarse-grained volatile List.
+					+fine-grained volatile List.
+
 
 The implementation of above two algorithms follows Art of Multicore programming by Maurice Herlihy.
-To build and see the Set implementation working please follow instructions within each subdirectory.
+To build and see the applications working please follow instructions within each subdirectory.
 
 References:
 [1]: Hsu, Terry Ching-Hsiang, et al. "NVthreads: Practical Persistence for Multi-threaded Applications." Proceedings of the Twelfth European 	  Conference on Computer Systems. ACM, 2017.
