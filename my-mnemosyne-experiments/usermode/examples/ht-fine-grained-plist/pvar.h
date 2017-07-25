@@ -1,5 +1,8 @@
 /*!
-* Author: Ajay Singh
+ * AUTHOR:      Ajay Singh, IIT Hyderabad
+ 
+ * ORGANIZATION:  LIP6 - INRIA&UPMC.
+ * DATE:      Jul 25, 2017.
  */
 
 #ifndef __PVAR_H__
@@ -18,7 +21,7 @@
 /**************************************************************************************/
 #define MIN_KEY 0
 #define MAX_KEY 1000
-#define NUM_THREADS 50
+#define NUM_THREADS 10
 #define TAB_SIZE 16
 #define TIME_EVAL
 #define DEBUG

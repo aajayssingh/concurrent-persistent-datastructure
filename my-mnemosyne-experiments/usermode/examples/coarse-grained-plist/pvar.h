@@ -1,5 +1,11 @@
 /*!
-* Author: Ajay Singh
+ * DESCP:     Driver file for coarse grained persistent list implemented using Mnemosyene. The algorithm
+ *          used is taken from Art of multiprocessor programming book chapter 9. 
+ 
+ * AUTHOR:      Ajay Singh, IIT Hyderabad
+ 
+ * ORGANIZATION:  LIP6 - INRIA&UPMC.
+ * DATE:      Jul 25, 2017.
  */
 
 #ifndef __PVAR_H__
@@ -17,8 +23,8 @@
 //List Global declarations
 /**************************************************************************************/
 #define MIN_KEY 0
-#define MAX_KEY 1000
-#define NUM_THREADS 50
+#define MAX_KEY 20
+#define NUM_THREADS 1
 #define TIME_EVAL
 typedef unsigned int uint;
 

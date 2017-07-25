@@ -1,8 +1,11 @@
-/*
- * coarse-plist.cpp
- * This implements a persistent concurrent set using a linked list. The algorithm code follows Art of multiprocessor programming
- * book, chapter 9.
- * author: Ajay Singh
+/*!
+ * DESCP:			Driver file for coarse grained persistent list implemented using NVML. The algorithm
+ * 					used is taken from Art of multiprocessor programming book chapter 9. 
+ 
+ * AUTHOR:			Ajay Singh, IIT Hyderabad
+ 
+ * ORGANIZATION: 	LIP6 - INRIA&UPMC.
+ * DATE:			Jul 25, 2017.
  */
 #include "coarse-plist.h"
 
@@ -28,12 +31,21 @@ std::thread t[num_threads];
 std::mutex mtx;
 std::condition_variable cv;
 bool launch = false;
+
+/*
+* DESCP:	barrier to sychronize all threads after creation.
+* AUTHOR:	Ajay Singh
+*/
 void wait_for_launch()
 {
 	std::unique_lock<std::mutex> lck(mtx);
 	while (!launch) cv.wait(lck);
 }
 
+/*
+* DESCP:	let threads execute their task after final thread has arrived.
+* AUTHOR:	Ajay Singh
+*/
 void shoot()
 {
 	std::unique_lock<std::mutex> lck(mtx);
@@ -41,6 +53,10 @@ void shoot()
 	cv.notify_all();
 }
 
+/*
+* DESCP:	worker for threads that call list's function as per their distribution.
+* AUTHOR:	Ajay Singh
+*/
 void worker(uint_t tid)
 {
 	//barrier to synchronise all threads for a coherent launch :)
@@ -128,12 +144,12 @@ main(int argc, char *argv[])
 	{
 		std::cout <<"init the list first!" <<std::endl;
 		q->init(pop);
-		for (uint_t i = 0; i < 2; ++i)
+		/*for (uint_t i = 0; i < 2; ++i)
 		{
 			uint_t key = rand()%(MAX_KEY-1) + 1;
 			uint_t val = rand()%(MAX_KEY-1) + 1;		
 			q->insert(pop, key, val);
-		}
+		}*/
 
 		q->print();
 	}

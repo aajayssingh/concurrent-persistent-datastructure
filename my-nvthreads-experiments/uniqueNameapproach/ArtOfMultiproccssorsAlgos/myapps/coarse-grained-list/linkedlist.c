@@ -1,6 +1,8 @@
-/* ---------------------------------------------------------------------------
-ISSUES: I get map error: 0xffffffffffff if try to free a node.
- * ---------------------------------------------------------------------------
+/*!
+ * AUTHOR:      Ajay Singh, IIT Hyderabad
+ 
+ * ORGANIZATION:  LIP6 - INRIA&UPMC.
+ * DATE:      Jun 25, 2017.
  */
 #include <algorithm>
 #include "linkedlist.h"

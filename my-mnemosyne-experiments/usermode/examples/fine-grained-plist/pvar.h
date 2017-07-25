@@ -1,6 +1,9 @@
 /*!
-* Author: Ajay Singh
- */
+ * AUTHOR:      Ajay Singh, IIT Hyderabad
+ 
+ * ORGANIZATION:  LIP6 - INRIA&UPMC.
+ * DATE:      Jul 25, 2017.
+*/
 
 #ifndef __PVAR_H__
 #define __PVAR_H__

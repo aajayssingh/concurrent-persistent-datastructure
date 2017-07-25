@@ -1,15 +1,9 @@
-
-// Author: Ajay Singh
-// hash table
-// Result: 
-
-// #include <stdlib.h>
-// #include <stdio.h>
-// #include <pthread.h>
-// #include <string.h>
-// #include <sys/types.h>
-// #include <unistd.h>
-
+/*!
+ * AUTHOR:      Ajay Singh, IIT Hyderabad
+ 
+ * ORGANIZATION:  LIP6 - INRIA&UPMC.
+ * DATE:      Jul 25, 2017.
+ */
 #include "hashtab.h"
 
 /*#define touch_pages 10

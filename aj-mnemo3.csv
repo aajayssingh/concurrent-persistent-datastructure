@@ -1,0 +1,18 @@
+sda               0.00         0.00         0.00          0          0,,tps, kB_read/s, kB_wrtn/s,kB_read,kB_wrtn
+sda               3.00         0.00       100.00          0        100,,0,0,0,0,0
+sda               0.00         0.00         0.00          0          0,,3,0,100,0,100
+sda               0.00         0.00         0.00          0          0,,0,0,0,0,0
+sda               2.00         0.00        48.00          0         48,,0,0,0,0,0
+sda               0.00         0.00         0.00          0          0,,2,0,48,0,48
+sda               0.00         0.00         0.00          0          0,,0,0,0,0,0
+sda              54.00         0.00       480.00          0        480,,0,0,0,0,0
+sda               0.00         0.00         0.00          0          0,,54,0,480,0,480
+sda               0.00         0.00         0.00          0          0,,0,0,0,0,0
+,,0,0,0,0,0
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+iostat every 1 sec for 50 times calculation.,,,,,,
+mnmosyne coarse grained ran for 50 times manually with 1 thread only doing single insert operation.,,,,,,
+Middle 10 observations taken,,,,,,

@@ -1,7 +1,8 @@
-/* ---------------------------------------------------------------------------
- * Coarse-Grained Singly-linked List
-
- * ---------------------------------------------------------------------------
+/*!
+ * AUTHOR:      Ajay Singh, IIT Hyderabad
+ 
+ * ORGANIZATION:  LIP6 - INRIA&UPMC.
+ * DATE:      Jun 25, 2017.
  */
 #ifndef _LINKED_LIST_H_
 #define _LINKED_LIST_H_

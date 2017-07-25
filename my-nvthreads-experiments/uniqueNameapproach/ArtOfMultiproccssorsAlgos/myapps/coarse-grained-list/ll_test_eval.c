@@ -1,9 +1,11 @@
-/*
-NVThread coarse grained linked list with evaluation
-notes: the count and real count is needed to fix: the two same name strings for diferent nodes. as when I was deleting a node the count gets reduced by one and when next time a node was added the reapeated name is given to new node hence the recovermap file has multiple nodes ith same key. So unable to recover the node correctly.
-*/
-
-
+/*!
+ * DESCP:     Driver file for coarse grained persistent list implemented using Nvthreads.
+ 
+ * AUTHOR:      Ajay Singh, IIT Hyderabad
+ 
+ * ORGANIZATION:  LIP6 - INRIA&UPMC.
+ * DATE:      Jun 25, 2017.
+ */
 #include <iostream>
 #include <pthread.h>
 #include <unistd.h> // for sleep function

@@ -1,7 +1,10 @@
-/*
-NVThread coarse grained linked list with evaluation
-*/
-
+/*!
+ * DESCP:       open addressed persistent Hash Table using NVThreads. 
+ * AUTHOR:      Ajay Singh, IIT Hyderabad
+ 
+ * ORGANIZATION:  LIP6 - INRIA&UPMC.
+ * DATE:      Jul 25, 2017.
+ */
 
 #include <iostream>
 #include <pthread.h>

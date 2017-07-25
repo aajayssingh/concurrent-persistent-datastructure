@@ -1,5 +1,7 @@
-/*
- * author: Ajay Singh
+/*!
+ * AUTHOR:			Ajay Singh, IIT Hyderabad 
+ * ORGANIZATION: 	LIP6 - INRIA&UPMC.
+ * DATE:			Jul 25, 2017.
  */
 #include <ex_common.h>
 #include <iostream>
@@ -29,13 +31,6 @@ using nvml::obj::delete_persistent;
 using nvml::obj::transaction;
 using nvml::obj::mutex;
 
-/*
- * Persistent memory list-based queue
- *
- * A simple, not template based, implementation of queue using
- * libpmemobj C++ API. It demonstrates the basic features of persistent_ptr<>
- * and p<> classes.
- */
 class pmem_ht {
 
 	/* entry in the list */
@@ -59,14 +54,20 @@ class pmem_ht {
 
 public:
 
+	/*
+	* DESCP:	Selects a buckets for a key.
+	* AUTHOR:	Ajay Singh
+	*/
 	uint_t hash_func(uint_t key)
 	{
 		//std::cout<<"ht_size"<<ht_size<<std::endl;
 		return (key%tab_size);
 	}
+	
 	/*
-	 * creates the initial list with two sentinel nodes: head --->tail
-	 */
+	* DESCP:	Prepares a initial ht with sentinel nodes.
+	* AUTHOR:	Ajay Singh
+	*/
 	void
 	init (pool_base &pop)
 	{
@@ -103,9 +104,11 @@ public:
 	}
 
 	/*
-	 * Inserts a new node<key, val> in the list. If the operation succeeds then return true, 
-	 * otherwise if the node<key> is already present return false.
-	 */
+	* DESCP:	Insert a node with <key, val> inside the ht if same key is not already present .
+	If the node<key, val> is inserted successfuly then function returns 1. Else if the node<key> is already
+	present the function returns 0.
+	* AUTHOR:	Ajay Singh
+	*/
 	bool
 	insert(pool_base &pop, uint_t key, uint_t val)
 	{
@@ -147,10 +150,11 @@ public:
 		return ret;
 	}
 
-/*
-* Removes the node<key> from the list. If the node is present remove it and return true along with the node<val>, 
-* else just return false.
-*/
+	/* 
+	* DESCP:	Deletes a node<key> from the ht and returns the <val> of the node<key>. If node cannot be deleted 
+	function returns 0. Else function returns 1 along with the <val>.
+	* AUTHOR:	Ajay Singh
+	*/
 	bool remove(pool_base &pop, uint_t key, uint_t* val)
 	{
 		bool ret = false;
@@ -191,9 +195,9 @@ public:
 	}
 
 	/*
-	 * finds the node<key> in the list. If found return true along with node<val> corresponding to the desired key
-	 * Else return false.
-	 */
+	* DESCP:	Find a node<key> in the ht and returns 1 alongwith the <val> found else returns 0.
+	* AUTHOR:	Ajay Singh
+	*/
 	bool find(pool_base &pop, uint_t key, uint_t* val)
 	{
 		bool ret = false;
@@ -232,8 +236,9 @@ public:
 
 
 	/*
-	 * Prints the entire contents of the list.
-	 */
+	* DESCP:	Print the ht
+	* AUTHOR:	Ajay Singh
+	*/
 	void
 	print(void) const
 	{
@@ -247,7 +252,8 @@ public:
 	}
 
 	/*
-	 * checks if the list is already present in NVM.
+	 * DESCP:	checks if the ht is already present in NVM.
+	 * AUTHOR:	Ajay Singh
 	 */
 	bool
 	is_inited(void)

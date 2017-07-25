@@ -1,0 +1,18 @@
+Device:            tps    kB_read/s    kB_wrtn/s    kB_read    kB_wrtn,tps, kB_read/s, kB_wrtn/s,kB_read,kB_wrtn
+sda               0.00         0.00         0.00          0          0,0,0,0,0,0
+sda               0.00         0.00         0.00          0          0,0,0,0,0,0
+sda               1.50         2.00        24.00          4         48,1.5,2,24,4,48
+sda               1.00         4.00         0.00          8          0,1,4,0,8,0
+sda               0.00         0.00         0.00          0          0,0,0,0,0,0
+sda               1.00         0.00        24.00          0         48,1,0,24,0,48
+sda               0.00         0.00         0.00          0          0,0,0,0,0,0
+sda               9.00         0.00        38.00          0         76,9,0,38,0,76
+sda               1.00         0.00         8.00          0         16,1,0,8,0,16
+sda               2.00         0.00        84.00          0        168,2,0,84,0,168
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+iostat every 2 sec for 50 times calculation.,,,,,
+mnmosyne coarse grained ran for 50 times with 1 sec interval with 1 thread only doing single insert operation.,,,,,
+Middle 10 observations taken,,,,,

@@ -1,14 +1,10 @@
 /*!
- * TODO: If continuing from last app run and using pfree in del() than seg fault.
- 	* try declaring node_t as persistent.
- 	* and then use pfree for it. 
- 	* pfree() in del() gives seg fault.
- * driver file for coarse grained persistent list implemented using Mnemosyene. The algorithm
- * used is taken from Art of multiprocessor programming book chapter 9. 
- * list maintains the invariant that all nodes are in increasing order of their keys with two sentinel 
- * nodes namely, head and tail which are never modified.
- * the keys of each node of the list lie between key of head and tail.
- * AUTHOR: Ajay Singh
+ * DESCP:			Driver file for coarse grained persistent hash table implemented using Mnemosyene. The table is
+ 					closed addressed. Implemented using coarse-grained list. 
+ * AUTHOR:			Ajay Singh, IIT Hyderabad
+ 
+ * ORGANIZATION: 	LIP6 - INRIA&UPMC.
+ * DATE:			Jul 25, 2017.
  */
 #include "pvar.h"
 #include <stdio.h>
@@ -56,7 +52,9 @@ void barrier_init(barrier_t *b, int n)
     b->crossing = 0;
 }
 
-/*Each thread calls this function to synchronize itself with all the threads*/
+/*
+* DESCP:	function to initialize barrier structure
+*/
 void barrier_cross(barrier_t *b)
 {
     pthread_mutex_lock(&b->mutex);
@@ -71,7 +69,10 @@ void barrier_cross(barrier_t *b)
     pthread_mutex_unlock(&b->mutex);
 }
 
-/*worker for threads that call lists find functionality*/
+/*
+* DESCP:	worker for threads that call hash table's find functionality
+* AUTHOR:	Ajay Singh
+*/
 void* finder(void *threadData)
 {
 	struct thread_info *d = (struct thread_info *)threadData;
@@ -86,7 +87,10 @@ void* finder(void *threadData)
 	}
 }
 
-/*worker for threads that call list's delete functionality*/
+/*
+* DESCP:	worker for threads that call hash table's delete functionality
+* AUTHOR:	Ajay Singh
+*/
 void* remover(void *threadData)
 {
 	struct thread_info *d = (struct thread_info *)threadData;
@@ -108,7 +112,10 @@ void* remover(void *threadData)
 	#endif
 }
 
-/*worker for threads that call list's insert functionality*/
+/*
+* DESCP:	worker for threads that call hash table's insert functionality
+* AUTHOR:	Ajay Singh
+*/
 void* adder(void *threadData)
 {
 	struct thread_info *d = (struct thread_info *)threadData;
@@ -133,8 +140,10 @@ void* adder(void *threadData)
 
 }
 
-/*function to distribute threads for invoking insert(), del() and find() functions on list 
-  and evaluates total wallclock time taken by all threads.
+/*
+* DESCP:	function to distribute threads for invoking insert(), del() and find() functions on hash table
+  and evaluates total wall clock time taken by all threads.
+* AUTHOR:	Ajay Singh
 */
 void list_bench()
 {

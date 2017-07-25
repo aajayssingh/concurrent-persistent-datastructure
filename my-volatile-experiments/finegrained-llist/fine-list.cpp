@@ -1,7 +1,11 @@
-/*
- * coarse-plist.cpp
- * This implements a persistent concurrent set.
- * author: Ajay Singh
+/*!
+ * DESCP:			Driver file for fine-grained volatile list. The algorithm
+ * 					used is taken from Art of multiprocessor programming book chapter 9. 
+ 
+ * AUTHOR:			Ajay Singh, IIT Hyderabad
+ 
+ * ORGANIZATION: 	LIP6 - INRIA&UPMC.
+ * DATE:			Jul 25, 2017.
  */
 #include "fine-list.h"
 
@@ -22,6 +26,11 @@ std::thread t[num_threads];
 std::mutex mtx;
 std::condition_variable cv;
 bool launch = false;
+
+/*
+* DESCP:	barrier to sychronize all threads after creation.
+* AUTHOR:	Ajay Singh
+*/
 void wait_for_launch()
 {
 	std::unique_lock<std::mutex> lck(mtx);
@@ -29,6 +38,10 @@ void wait_for_launch()
 	while (!launch) cv.wait(lck);
 }
 
+/*
+* DESCP:	let threads execute their task after final thread has arrived.
+* AUTHOR:	Ajay Singh
+*/
 void shoot()
 {
 	std::unique_lock<std::mutex> lck(mtx);
@@ -38,6 +51,10 @@ void shoot()
 }
 /*************************Barrier code ends*****************************/
 
+/*
+* DESCP:	worker for threads that call ht's function as per their distribution.
+* AUTHOR:	Ajay Singh
+*/
 void worker(uint_t tid)
 {
 	//barrier to synchronise all threads for a coherent launch :)

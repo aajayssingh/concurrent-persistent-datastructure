@@ -1,10 +1,18 @@
+/*!
+ * AUTHOR:			Ajay Singh, IIT Hyderabad
+ 
+ * ORGANIZATION: 	LIP6 - INRIA&UPMC.
+ * DATE:			Jul 25, 2017.
+ */
+
 #ifndef __PVAR_C__
 #define __PVAR_C__
 #include "pvar.h"
-/*Prepares a initial list with sentinel nodes as follows: 
-  head -> tail
 
-  mylist is the root structure which holds the list data.
+/*
+* DESCP:	Prepares a initial list with sentinel nodes as follows: head -> tail
+		mylist is the root structure which holds the list data.
+* AUTHOR:	Ajay Singh
 */
 void init(void)
 {
@@ -30,18 +38,23 @@ void init(void)
 		printf("list inited...\n");
 }
 
-/*To re init the locks. In previous run if the application had crashed then, I have to ensure that
+/*
+* DESCP:	To re init the locks. In previous run if the application had crashed then, I have to ensure that
 lock state which is recorded in persistent memory is reinitialised to ensure proper 
-lock acquisition in the subsequent run of the application.*/
+lock acquisition in the subsequent run of the application.
+* AUTHOR:	Ajay Singh
+*/
 void recover_init (void)
 {
 	printf("LIST: INIT LOCK\n");
 	pthread_mutex_init(&(((list_t*)PADDR(mylist))->gmtx), NULL);
 }
 
-/*insert a node with <key, val> inside the list if same key is not already present .
+/*
+* DESCP:	Insert a node with <key, val> inside the list if same key is not already present .
 If the node<key, val> is inserted successfuly then function returns 1. Else if the node<key> is already
 present the function returns 0.
+* AUTHOR:	Ajay Singh
 */
 uint insert (list_t *list, uint key, uint val)
 {
@@ -81,8 +94,10 @@ uint insert (list_t *list, uint key, uint val)
 	return ret;
 }
 
-/* Deletes a node<key> from the list and returns the <val> of the node<key>. If node cannot be deleted 
+/* 
+* DESCP:	Deletes a node<key> from the list and returns the <val> of the node<key>. If node cannot be deleted 
 function returns 0. Else function returns 1 along with the <val>.
+* AUTHOR:	Ajay Singh
 */
 uint del (list_t *list, uint key, uint* val)
 {
@@ -105,7 +120,7 @@ uint del (list_t *list, uint key, uint* val)
 			*val = curr->val;
 			pred->next = (mynode_t*)(curr->next);
 
-			//pfree(curr);/*TODO: GIVES SEG FAult no Idea Why :P, I will Blame the library ;)*/
+			pfree((mynode_t*)curr);/*TODO: GIVES SEG FAult no Idea Why :P, I will Blame the library ;)*/
 			//curr = NULL;
 
 			printf("DELETE: <key:val> ---> <%d:%d> \n", key, *val);
@@ -121,7 +136,10 @@ uint del (list_t *list, uint key, uint* val)
 	return ret;
 }
 
-/*Find a node<key> in the list and returns 1 alongwith the <val> found else returns 0.*/
+/*
+* DESCP:	Find a node<key> in the list and returns 1 alongwith the <val> found else returns 0.
+* AUTHOR:	Ajay Singh
+*/
 uint find (list_t *list, uint key, uint* val)
 {
 	uint ret = 0;
@@ -151,7 +169,10 @@ uint find (list_t *list, uint key, uint* val)
 	return ret;
 }
 
-/*Print the list*/
+/*
+* DESCP:	Print the list
+* AUTHOR:	Ajay Singh
+*/
 void print_list(const list_t *list)
 {
 	mynode_t* node = NULL;
@@ -163,4 +184,5 @@ void print_list(const list_t *list)
 		printf("<key:val> : <%d:%d>\n", node->key, node->val);
 	}
 }
-#endif
+
+#endif //#define __PVAR_C__

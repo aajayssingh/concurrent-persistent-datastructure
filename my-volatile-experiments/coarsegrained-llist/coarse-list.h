@@ -1,3 +1,8 @@
+/*!
+ * AUTHOR:			Ajay Singh, IIT Hyderabad 
+ * ORGANIZATION: 	LIP6 - INRIA&UPMC.
+ * DATE:			Jul 25, 2017.
+ */
 #ifndef COARSE_LIST_H
 #define COARSE_LIST_H
 
@@ -30,7 +35,10 @@ class volatile_list {
 	std::mutex global_list_pmutex;
 	uint_t node_count;
 public:
-	
+	/*
+	* DESCP:	Prepares a initial list with sentinel nodes as follows: head -> tail
+	* AUTHOR:	Ajay Singh
+	*/
 	void
 	init ()
 	{
@@ -57,8 +65,11 @@ public:
 	}
 
 	/*
-	 * Inserts a new element in the list.
-	 */
+	* DESCP:	Insert a node with <key, val> inside the list if same key is not already present .
+	If the node<key, val> is inserted successfuly then function returns 1. Else if the node<key> is already
+	present the function returns 0.
+	* AUTHOR:	Ajay Singh
+	*/
 	bool
 	insert(uint_t key, uint_t val)
 	{
@@ -98,9 +109,11 @@ public:
 		return ret;
 	}
 
-	/*
-	 * Removes the element from the list.
-	 */
+	/* 
+	* DESCP:	Deletes a node<key> from the list and returns the <val> of the node<key>. If node cannot be deleted 
+	function returns 0. Else function returns 1 along with the <val>.
+	* AUTHOR:	Ajay Singh
+	*/
 	bool remove(uint_t key, uint_t* val)
 	{
 		bool ret = false;
@@ -142,8 +155,9 @@ public:
 	}
 
 	/*
-	 * finds the element in the list.
-	 */
+	* DESCP:	Find a node<key> in the list and returns 1 alongwith the <val> found else returns 0.
+	* AUTHOR:	Ajay Singh
+	*/
 	bool find(uint_t key, uint_t* val)
 	{
 		bool ret = false;
@@ -183,8 +197,9 @@ public:
 
 
 	/*
-	 * Prints the entire contents of the list.
-	 */
+	* DESCP:	Print the list
+	* AUTHOR:	Ajay Singh
+	*/
 	void
 	print(void) const
 	{

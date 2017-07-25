@@ -1,8 +1,8 @@
-/*
- * coarse-plist.cpp
- * This implements a persistent concurrent set using a linked list. The algorithm code follows Art of multiprocessor programming
- * book, chapter 9.
- * author: Ajay Singh
+/*!
+ * DESCP:			Driver file for coarse-grained persistent hash table implemented using NVML. 
+ * AUTHOR:			Ajay Singh, IIT Hyderabad 
+ * ORGANIZATION: 	LIP6 - INRIA&UPMC.
+ * DATE:			Jul 25, 2017.
  */
 #include "ht-coarse-plist.h"
 
@@ -27,12 +27,21 @@ std::thread t[num_threads];
 std::mutex mtx;
 std::condition_variable cv;
 bool launch = false;
+
+/*
+* DESCP:	barrier to sychronize all threads after creation.
+* AUTHOR:	Ajay Singh
+*/
 void wait_for_launch()
 {
 	std::unique_lock<std::mutex> lck(mtx);
 	while (!launch) cv.wait(lck);
 }
 
+/*
+* DESCP:	let threads execute their task after final thread has arrived.
+* AUTHOR:	Ajay Singh
+*/
 void shoot()
 {
 	std::unique_lock<std::mutex> lck(mtx);
@@ -40,6 +49,10 @@ void shoot()
 	cv.notify_all();
 }
 
+/*
+* DESCP:	worker for threads that call ht's function as per their distribution.
+* AUTHOR:	Ajay Singh
+*/
 void worker(uint_t tid)
 {
 	//barrier to synchronise all threads for a coherent launch :)
