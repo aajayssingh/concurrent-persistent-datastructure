@@ -1,5 +1,5 @@
 If you use my developed data structures please star the repo :) and also cite following accompanying short paper
-https://arxiv.org/abs/1712.04989
+https://arxiv.org/abs/1712.04989 . The short paper was accepted in Student Research Symposium of HiPC 2017.
 
 The rep consists of my experiments with SCM/NVM programming libraries namely,
 					NVThreads [1]
