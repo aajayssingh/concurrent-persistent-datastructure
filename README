@@ -3,7 +3,7 @@ https://arxiv.org/abs/1712.04989 . The short paper was accepted in Student Resea
 
 The rep consists of my experiments with SCM/NVM programming libraries namely,
 					NVThreads [1]
-					NVML	  [2]
+					NVML (now called PMDK)	  [2]
 					Mnemosyne [3]
 Using above libraries following concurrent persistent DS has been implemented:
 [1]NVThreads: various approaches with NVthreads some including changes in the library itself
@@ -11,7 +11,7 @@ Using above libraries following concurrent persistent DS has been implemented:
 					+fine grained persistent List.
 					+open addressed hash Table.
 					
-[2]NVML:
+[2]NVML (Now called as PMDK):
 					+coarse-grained persistent List.
 					+fine-grained persistent List.
 					+closed addressed coarse-grained hash Table.
@@ -32,6 +32,6 @@ To build and see the applications working please follow instructions within each
 
 References:
 [1]: Hsu, Terry Ching-Hsiang, et al. "NVthreads: Practical Persistence for Multi-threaded Applications." Proceedings of the Twelfth European 	  Conference on Computer Systems. ACM, 2017.
-[2]: https://github.com/pmem/nvml/
+[2]: https://github.com/pmem/pmdk
 [3]: Volos, Haris, Andres Jaan Tack, and Michael M. Swift. "Mnemosyne: Lightweight persistent memory." ACM SIGARCH Computer Architecture News. 	    Vol. 39. No. 1. ACM, 2011.
 
