@@ -30,6 +30,8 @@ Using above libraries following concurrent persistent DS has been implemented:
 The implementation of above two algorithms follows Art of Multicore programming by Maurice Herlihy.
 To build and see the applications working please follow instructions within each subdirectory.
 
+INFO: Note that nvml library, has changed its name since I experimented with it. However, the data structure's I wrote using nvml (pmdk) can still be used as a guide, especially for beginners who is looking for some point to start:).
+
 References:
 [1]: Hsu, Terry Ching-Hsiang, et al. "NVthreads: Practical Persistence for Multi-threaded Applications." Proceedings of the Twelfth European 	  Conference on Computer Systems. ACM, 2017.
 [2]: https://github.com/pmem/pmdk
